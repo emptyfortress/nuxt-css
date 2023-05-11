@@ -1,0 +1,24 @@
+{
+    "devDependencies": {
+        "@types/node": "^18",
+        "@volar/vue-language-plugin-pug": "^1.6.4",
+        "nuxt": "^3.4.3",
+        "nuxt-quasar-ui": "^1.7.3",
+        "prettier": "^2.8.8",
+        "pug": "^3.0.2"
+    },
+    "name": "nuxt-app",
+    "private": true,
+    "scripts": {
+        "build": "nuxt build",
+        "dev": "nuxt dev -o",
+        "generate": "nuxt generate",
+        "postinstall": "nuxt prepare",
+        "preview": "nuxt preview"
+    },
+    "dependencies": {
+        "@quasar/extras": "^1.16.3",
+        "quasar": "^2.11.10",
+        "sass": "^1.62.1"
+    }
+}
