@@ -4,7 +4,7 @@ import { useMotion } from '@vueuse/motion'
 const target = ref<HTMLElement>()
 const target1 = ref<HTMLElement>()
 
-const { apply: two } = useMotion(target, {
+const { apply: applyTwo } = useMotion(target, {
 	enter: {
 		scale: 1,
 	},
@@ -12,7 +12,7 @@ const { apply: two } = useMotion(target, {
 		scale: 2,
 	},
 })
-const { apply: one } = useMotion(target1, {
+const { apply: applyOne } = useMotion(target1, {
 	initial: {
 		scale: 1,
 	},
@@ -30,12 +30,12 @@ const { apply: one } = useMotion(target1, {
 })
 
 const scale = () => {
-	two('custom')
+	applyTwo('custom')
 }
 
 const yourCustomEvent = async () => {
-	scale()
-	await one({
+	// scale()
+	await applyOne({
 		scale: 2.5,
 		transition: {
 			type: 'sping',
@@ -43,9 +43,9 @@ const yourCustomEvent = async () => {
 			damping: 15,
 		},
 	})
-	await one('initial')
-	// await two('custom')
-	await two('enter')
+	await applyTwo('custom')
+	await applyOne('initial')
+	await applyTwo('enter')
 }
 </script>
 
