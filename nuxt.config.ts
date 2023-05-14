@@ -1,16 +1,59 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['nuxt-quasar-ui'],
+	modules: ['nuxt-quasar-ui', 'nuxt-icons', '@vueuse/motion/nuxt'],
 	quasar: {
-		sassVariables: 'assets/quasar.variables.scss',
+		sassVariables: 'assets/styles/quasar.variables.scss',
+		extras: {
+			fontIcons: ['mdi-v6'],
+		},
 		/* */
 	},
-	css: ['@/assets/main.scss'],
+	css: ['@/assets/styles/main.scss'],
 	vite: {
 		css: {
 			preprocessorOptions: {
 				scss: {
-					additionalData: '@use "@/assets/_color.scss" as *;',
+					additionalData: '@use "@/assets/styles/_color.scss" as *;',
+				},
+			},
+		},
+	},
+	devtools: {
+		enabled: false,
+	},
+	experimental: {
+		viewTransition: true,
+	},
+	// app: {
+	// 	pageTransition: {
+	// 		name: 'fade',
+	// 		mode: 'out-in', // default
+	// 	},
+	// 	layoutTransition: {
+	// 		name: 'slide',
+	// 		mode: 'out-in', // default
+	// 	},
+	// },
+	motion: {
+		directives: {
+			fuck: {
+				initial: {
+					opacity: 0,
+					rotate: 0,
+				},
+				enter: {
+					opacity: 1,
+					rotate: 380,
+				},
+			},
+			fick: {
+				initial: {
+					opacity: 0,
+					rotate: 0,
+				},
+				enter: {
+					opacity: 1,
+					rotate: 45,
 				},
 			},
 		},
