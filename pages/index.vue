@@ -4,44 +4,36 @@ import { useMotion } from '@vueuse/motion'
 const target = ref<HTMLElement>()
 const target1 = ref<HTMLElement>()
 
+const trans = {
+	type: 'sping',
+	stiffness: 600,
+	damping: 12,
+}
+
 const { apply: applyTwo } = useMotion(target, {
 	enter: {
 		scale: 1,
 	},
 	custom: {
 		scale: 2,
+		transition: trans,
+		delay: 1500,
 	},
 })
 const { apply: applyOne } = useMotion(target1, {
 	initial: {
 		scale: 1,
 	},
-	enter: {
-		scale: 0.5,
-		transition: {
-			type: 'sping',
-			stiffness: 600,
-			damping: 15,
-		},
-	},
 	custom: {
 		scale: 2,
+		transition: trans,
 	},
 })
 
-const scale = () => {
-	applyTwo('custom')
-}
-
 const yourCustomEvent = async () => {
-	// scale()
 	await applyOne({
-		scale: 2.5,
-		transition: {
-			type: 'sping',
-			stiffness: 600,
-			damping: 15,
-		},
+		scale: 2,
+		transition: trans,
 	})
 	await applyTwo('custom')
 	await applyOne('initial')
