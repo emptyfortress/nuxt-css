@@ -34,28 +34,28 @@ export default defineNuxtConfig({
 	// 		mode: 'out-in', // default
 	// 	},
 	// },
-	motion: {
-		directives: {
-			fuck: {
-				initial: {
-					opacity: 0,
-					rotate: 0,
-				},
-				enter: {
-					opacity: 1,
-					rotate: 380,
-				},
-			},
-			fick: {
-				initial: {
-					opacity: 0,
-					rotate: 0,
-				},
-				enter: {
-					opacity: 1,
-					rotate: 45,
-				},
-			},
-		},
-	},
+	// 	motion: {
+	// 		directives: {
+	// 			fuck: {
+	// 				initial: {
+	// 					opacity: 0,
+	// 					rotate: 0,
+	// 				},
+	// 				enter: {
+	// 					opacity: 1,
+	// 					rotate: 380,
+	// 				},
+	// 			},
+	// 			fick: {
+	// 				initial: {
+	// 					opacity: 0,
+	// 					rotate: 0,
+	// 				},
+	// 				enter: {
+	// 					opacity: 1,
+	// 					rotate: 45,
+	// 				},
+	// 			},
+	// 		},
+	// 	},
 })
