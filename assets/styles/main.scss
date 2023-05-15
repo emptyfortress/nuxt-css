@@ -1,7 +1,8 @@
+@import '_theme.scss';
 @import '_motion.scss';
 
 body {
-	background-color: var(--mainBg);
+	background-color: var(--bg-light);
 	transition: background-color 0.5s;
 }
 .page {

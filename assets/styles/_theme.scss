@@ -1,0 +1,66 @@
+:root {
+	--bg-light: hsl(75, 14%, 95%);
+	--bg-panel: hsl(0, 0%, 96%);
+	--bg-header: hsl(75, 14%, 85%);
+	--bg-card: #fff;
+	--bg-dark: #0d0b09;
+	--bg-main: var(--bg-light);
+	--bg-chip: hsla(0, 0%, 0%, 0.1);
+	--bg-selected: #b3dcff;
+	--prim: #285e8b;
+	--icon: #285e8b;
+
+	--text-color: rgba(0, 0, 0, 0.7);
+	--text-secondary: rgba(0, 0, 0, 0.5);
+	--invert-text-color: rgba(255, 255, 255, 0.9);
+	--border-color: rgba(0, 0, 0, 0.12);
+	--chip-text: #5ebaf5;
+
+	--my-color-step-50: #1e1915;
+	--my-color-step-100: #29221c;
+	--my-color-step-150: #362d25;
+	--my-color-step-200: #4b4034;
+	--my-color-step-250: #4d4135;
+	--my-color-step-300: #4d4d4d;
+	--my-color-step-350: #796653;
+	--my-color-step-400: #85715d;
+	--my-color-step-450: #937d67;
+	--my-color-step-500: #9e8a75;
+	--my-color-step-550: #a79481;
+	--my-color-step-600: #b1a190;
+	--my-color-step-650: #baab9c;
+	--my-color-step-700: #c4b8ab;
+	--my-color-step-750: #cfc4ba;
+	--my-color-step-800: #d9d1c9;
+	--my-color-step-850: #e2dbd5;
+	--my-color-step-900: #ece8e4;
+	--my-color-step-950: #f5f2f0;
+	--my-item-background: #241f19;
+	--my-toolbar-background: #241f19;
+	--my-tab-bar-background: #241f19;
+	--my-card-background: #241f19;
+	--bg-code: var(--my-color-step-950);
+}
+
+body.body--dark {
+	--bg-main: var(--bg-dark);
+	--bg-card: var(--my-card-background);
+	color: var(--dark-text-color);
+	--bg-header: var(--bg-dark);
+	--dark-text-color: #ab9073;
+	--text-color: var(--dark-text-color);
+	--invert-text-color: var(--dark-text-color);
+	--bg-chip: hsla(0, 0%, 100%, 0.15);
+	--chip-text: #fff;
+	--bg-selected: #003666;
+	--border-color: hsla(0, 0%, 100%, 0.2);
+	--bg-panel: var(--my-toolbar-background);
+	--prim: #1976d2;
+	--icon: var(--dark-text-color);
+	--bg-code: var(--my-color-step-50);
+	--text-secondary: var(--my-color-step-350);
+}
+.q-list--dark,
+.q-item--dark {
+	color: var(--dark-text-color);
+}
