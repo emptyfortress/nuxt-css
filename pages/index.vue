@@ -1,44 +1,5 @@
 <script setup lang="ts">
-import { useMotion } from '@vueuse/motion'
-
-const target = ref<HTMLElement>()
-const target1 = ref<HTMLElement>()
-
-const trans = {
-	type: 'sping',
-	stiffness: 600,
-	damping: 12,
-}
-
-const { apply: applyTwo } = useMotion(target, {
-	enter: {
-		scale: 1,
-	},
-	custom: {
-		scale: 2,
-		transition: trans,
-		delay: 1500,
-	},
-})
-const { apply: applyOne } = useMotion(target1, {
-	initial: {
-		scale: 1,
-	},
-	custom: {
-		scale: 2,
-		transition: trans,
-	},
-})
-
-const yourCustomEvent = async () => {
-	await applyOne({
-		scale: 2,
-		transition: trans,
-	})
-	await applyTwo('custom')
-	await applyOne('initial')
-	await applyTwo('enter')
-}
+const ratio = ref(300)
 </script>
 
 <template lang="pug">
@@ -46,37 +7,27 @@ div
 	Html
 		Head
 			Title CSS variables
-	.page
-		h3.main-header Home
-		p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ea a quaerat distinctio eveniet cum ad ut et nemo minus, dolore perferendis iure repellat eaque ipsam laboriosam unde minima earum?
-		.square(ref="target" @click="yourCustomEvent")
-		.new(ref="target1")
+	.container
+		q-splitter(v-model="ratio" unit="px" )
+			template(v-slot:before)
+				q-scroll-area.home
+					Tree
+					// p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, dolorum. Dolorum iure sequi consectetur numquam explicabo nam labore reiciendis error perspiciatis, dolores facilis amet sapiente, porro architecto. Ea, officiis corporis.
+					// component.q-mt-md(:is="Tree")
+
+			template(v-slot:after)
+				q-scroll-area.home
+					p Lorem ipsum, dolor sit amet consectetur adipisicing elit. Reiciendis, dolorum. Dolorum iure sequi consectetur numquam explicabo nam labore reiciendis error perspiciatis, dolores facilis amet sapiente, porro architecto. Ea, officiis corporis.
+							// component.q-mt-md(:is="Component")
+		// h3.main-header Home
+		// p Lorem ipsum dolor sit amet consectetur adipisicing elit. Atque ea a quaerat distinctio eveniet cum ad ut et nemo minus, dolore perferendis iure repellat eaque ipsam laboriosam unde minima earum?
+		// .square(ref="target" @click="yourCustomEvent")
+		// .new(ref="target1")
 </template>
 
 <style scoped lang="scss">
-.nuxt-icon {
-	font-size: 3rem;
-}
-.square {
-	width: 100px;
-	height: 100px;
-	background: red;
-	border-radius: 0.5rem;
-	cursor: pointer;
-}
-.new {
-	width: 100px;
-	height: 100px;
-	background: blue;
-}
-.main-header {
-	text-align: left;
-	left: 0;
-}
-.fuck {
-	width: 100px;
-	height: 100px;
-	background: green;
-	border-radius: 0.5rem;
+.home {
+	height: calc(100vh - 60px);
+	// background: transparent;
 }
 </style>

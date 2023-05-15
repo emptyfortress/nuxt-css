@@ -5,6 +5,22 @@ body {
 	background-color: var(--bg-light);
 	transition: background-color 0.5s;
 }
-.page {
-	padding: 2rem;
+
+.q-splitter--vertical.q-splitter--workable > .q-splitter__separator {
+	border-left: 2px dotted transparent;
+	margin-left: 0.5rem;
+	margin-right: 1rem;
+	background: var(--border-color);
+	&:hover,
+	&:active {
+		border-left: 2px dotted var(--prim);
+	}
+}
+
+.container {
+	padding: 0 1rem;
+	@media screen and (max-width: 1800px) {
+		margin: 0 auto;
+		max-width: 1218px;
+	}
 }
