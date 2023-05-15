@@ -29,9 +29,14 @@
 <script setup lang="ts">
 import { nodes } from '@/data/data'
 
+const tree = ref()
 const filter = ref('')
 const expanded = ref([])
 const selected = ref([])
+
+const toggle = () => {
+	tree.value.getExpandedNodes().length !== 0 ? tree.value.collapseAll() : tree.value.expandAll()
+}
 </script>
 
 <style scoped lang="scss">
