@@ -13,11 +13,9 @@
 			cy="17"
 			r="17"
 		/>
-		<Motion
-			:initial="false"
-			:animate="{ rotate: rot }"
-			:transition="transition"
-			tag="path"
+		<path
+			v-motion="'rotation'"
+			ref="sun"
 			id="sun"
 			fill-rule="evenodd"
 			clip-rule="evenodd"
@@ -41,11 +39,9 @@
 			/>
 		</mask>
 		<g mask="url(#mask0_787_74)">
-			<Motion
-				:initial="false"
-				:animate="{ scale: scale, x: transx }"
-				:transition="{ duration: 0.5, easing: 'ease-in' }"
-				tag="circle"
+			<circle
+				v-motion="'moving'"
+				ref="move"
 				id="move"
 				cx="17"
 				cy="17"
@@ -58,32 +54,41 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue'
-import { Motion } from 'motion/vue'
-import { spring } from 'motion'
+import { useMotion } from '@vueuse/motion'
 import { useQuasar } from 'quasar'
 const $q = useQuasar()
 
+const sun = ref()
+const move = ref()
+
+const rotation = useMotion(sun, {
+	enter: {
+		rotate: 0,
+	},
+	dark: {
+		rotate: 90,
+	},
+})
+const moving = useMotion(move, {
+	enter: {
+		scale: 1,
+		x: 0,
+	},
+	dark: {
+		scale: 1.6,
+		x: -6,
+	},
+})
+
 const theme = () => {
-	rot.value += 180
-	if ($q.dark.isActive) {
-		scale.value = 1.6
-		transx.value = -6
+	if (rotation.variant.value === 'enter') {
+		rotation.variant.value = 'dark'
+		moving.variant.value = 'dark'
 	} else {
-		scale.value = 1
-		transx.value = 0
+		rotation.variant.value = 'enter'
+		moving.variant.value = 'enter'
 	}
 	$q.dark.toggle()
-}
-
-const rot = ref(0)
-const scale = ref(1.6)
-const transx = ref(-6)
-
-const transition = {
-	easing: spring({
-		stiffness: 600,
-		damping: 12,
-	}),
 }
 </script>
 

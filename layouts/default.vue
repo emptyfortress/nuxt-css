@@ -5,13 +5,14 @@ div
 	header
 		q-btn(label="Next" color="primary" to="/test")
 		q-btn(label="back" color="primary" to="/")
+		Switcher
 	NuxtPage
 </template>
 
 <style scoped lang="scss">
 header {
-	height: 64px;
-	line-height: 64px;
+	height: 50px;
+	line-height: 50px;
 	border-bottom: var(--border);
 	position: sticky;
 	top: 0;

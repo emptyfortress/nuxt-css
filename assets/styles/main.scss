@@ -1,50 +1,9 @@
+@import '_motion.scss';
+
 body {
 	background-color: var(--mainBg);
+	transition: background-color 0.5s;
 }
 .page {
 	padding: 2rem;
 }
-
-::view-transition-old(root),
-::view-transition-new(root) {
-	animation-duration: 0.5s;
-}
-.main-header {
-	view-transition-name: header;
-}
-header {
-	view-transition-name: nav;
-}
-
-::view-transition-old(header),
-::view-transition-new(header) {
-	width: auto;
-	animation-duration: 0.5s;
-}
-
-.square {
-	view-transition-name: square;
-}
-p {
-	view-transition-name: par;
-}
-::view-transition-old(par),
-::view-transition-new(par) {
-	width: auto;
-	animation-duration: 0.5s;
-}
-::view-transition-old(square),
-::view-transition-new(square) {
-	// width: auto;
-	animation-duration: 0.5s;
-}
-
-// .fade-enter-active,
-// .fade-leave-active {
-// 	transition: opacity 0.5s ease;
-// }
-//
-// .fade-enter-from,
-// .fade-leave-to {
-// 	opacity: 0;
-// }
