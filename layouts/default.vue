@@ -1,5 +1,11 @@
 <script setup lang="ts">
 const ratio = ref(300)
+
+const router = useRouter()
+
+const home = () => {
+	router.push('/')
+}
 </script>
 
 <template lang="pug">
@@ -8,11 +14,11 @@ div
 		Head
 			Title CSS variables
 	header
-		.title
+		.title(@click="home")
 			q-icon(name="mdi-language-css3" size="lg")
 			div CSS variables
+		.grow
 		Switcher
-	// NuxtPage
 	.container
 		q-splitter(v-model="ratio" unit="px" )
 			template(v-slot:before)
@@ -42,9 +48,14 @@ header {
 .title {
 	display: flex;
 	align-items: center;
-	flex-grow: 1;
 	gap: 0.5rem;
 	font-size: 1.2rem;
+	cursor: pointer;
+}
+.grow {
+	flex-grow: 1;
+	// background: red;
+	// height: 100%;
 }
 .home {
 	height: calc(100vh - 60px);

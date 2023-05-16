@@ -9,6 +9,7 @@
 		icon='mdi-chevron-right'
 		node-key="id"
 		v-model:selected="selected"
+		no-selection-unset
 		v-model:expanded="expanded"
 		default-expand-all
 		:filter="filter")
@@ -36,15 +37,20 @@ import { nodes } from '@/data/data'
 const tree = ref()
 const filter = ref('')
 const expanded = ref([])
-const selected = ref([])
+const selected = ref()
 
 const toggle = () => {
 	tree.value.getExpandedNodes().length !== 0 ? tree.value.collapseAll() : tree.value.expandAll()
 }
 
+const route = useRoute()
+
 watchEffect(() => {
 	if (filter.value.length > 1) {
 		tree.value.expandAll()
+	}
+	if (route.fullPath === '/') {
+		selected.value = 0
 	}
 })
 </script>
