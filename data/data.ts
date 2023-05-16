@@ -146,9 +146,10 @@ const nodes = [
 				id: 20,
 				label: 'Controls',
 				icon: 'mdi-folder-outline',
+				url: '',
 				children: [
-					{ id: 21, label: 'Button', icon: 'mdi-xml' },
-					{ id: 22, label: 'Input', icon: 'mdi-xml' },
+					{ id: 21, label: 'Button', icon: 'mdi-xml', url: '' },
+					{ id: 22, label: 'Input', icon: 'mdi-xml', url: '' },
 				],
 			},
 		],
