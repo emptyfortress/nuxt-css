@@ -10,23 +10,26 @@
 		node-key="id"
 		v-model:selected="selected"
 		v-model:expanded="expanded"
-		)
+		:filter="filter")
 
 		template(v-slot:header-root="prop")
-			.row.items-center.q-gutter-sm.full-width
+			NuxtLink.row.items-center.q-gutter-sm.full-width(:to="prop.node.url")
 				q-avatar
 					img(src="/webclient.svg")
-				.label {{ prop.node.label }}
+				.label
+					WordHighlighter(:query="filter") {{ prop.node.label }}
 
 		template(v-slot:default-header="prop")
-			.row.items-center.q-gutter-sm.full-width
+			NuxtLink.row.items-center.q-gutter-sm.full-width(:to="prop.node.url")
 				template(v-if="prop.node.icon")
 					q-icon(:name="prop.node.icon")
-				.label {{ prop.node.label }}
+				.label
+					WordHighlighter(:query="filter") {{ prop.node.label }}
 
 </template>
 
 <script setup lang="ts">
+import WordHighlighter from 'vue-word-highlighter'
 import { nodes } from '@/data/data'
 
 const tree = ref()
@@ -37,6 +40,12 @@ const selected = ref([])
 const toggle = () => {
 	tree.value.getExpandedNodes().length !== 0 ? tree.value.collapseAll() : tree.value.expandAll()
 }
+
+watchEffect(() => {
+	if (filter.value.length > 1) {
+		tree.value.expandAll()
+	}
+})
 </script>
 
 <style scoped lang="scss">

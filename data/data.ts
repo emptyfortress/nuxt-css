@@ -5,12 +5,13 @@ const nodes = [
 		header: 'root',
 		avatar: '/webclient.svg',
 		desc: 'Это дескрипшн',
+		url: '/',
 		children: [
 			{
 				id: 1,
 				label: 'Principles',
 				icon: 'mdi-folder-outline',
-				url: '/pr/',
+				url: '/principles',
 				children: [
 					{ id: 2, label: 'Primary colors', icon: 'mdi-folder-outline', url: '/pr/' },
 					{ id: 3, label: 'Secondary colors', icon: 'mdi-folder-outline', url: '/pr/' },

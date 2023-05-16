@@ -21,9 +21,9 @@ export default defineNuxtConfig({
 	devtools: {
 		enabled: false,
 	},
-	experimental: {
-		viewTransition: true,
-	},
+	// experimental: {
+	// 	viewTransition: true,
+	// },
 	// app: {
 	// 	pageTransition: {
 	// 		name: 'fade',
