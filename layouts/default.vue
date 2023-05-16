@@ -23,7 +23,7 @@ div
 		q-splitter(v-model="ratio" unit="px" )
 			template(v-slot:before)
 				q-scroll-area.home
-					Tree
+					Tree.q-mt-lg
 
 			template(v-slot:after)
 				q-scroll-area.home

@@ -1,7 +1,6 @@
 <template lang="pug">
 .q-mr-md
 	.row.items-center.justify-between
-		q-btn(flat round dense icon="mdi-unfold-more-horizontal" @click="toggle").ic
 		q-input(v-model="filter" autofocus placeholder="Поиск" dense clearable clear-icon="mdi-close-circle" @clear="filter = ''").search
 			template(v-slot:prepend)
 				q-icon(name="mdi-magnify")
@@ -12,6 +11,7 @@
 		no-selection-unset
 		v-model:expanded="expanded"
 		default-expand-all
+		no-results-label="Ничего нет"
 		:filter="filter")
 
 		template(v-slot:header-root="prop")
@@ -20,6 +20,8 @@
 					img(src="/webclient.svg")
 				.label
 					WordHighlighter(:query="filter") {{ prop.node.label }}
+
+			q-btn.ic(flat round dense icon="mdi-unfold-more-horizontal" @click="toggle")
 
 		template(v-slot:default-header="prop")
 			NuxtLink.row.items-center.q-gutter-sm.full-width(:to="prop.node.url")
@@ -37,7 +39,7 @@ import { nodes } from '@/data/data'
 const tree = ref()
 const filter = ref('')
 const expanded = ref([])
-const selected = ref()
+const selected = ref(0)
 
 const toggle = () => {
 	tree.value.getExpandedNodes().length !== 0 ? tree.value.collapseAll() : tree.value.expandAll()
@@ -66,12 +68,17 @@ watchEffect(() => {
 	color: var(--text-color);
 }
 .search {
-	width: 200px;
-	// font-size: 1.1rem;
-	// background: rgba(0, 0, 0, 0.05);
+	width: 100%;
 }
 :deep(.q-tree__arrow) {
 	font-size: 1.5rem;
 	margin-right: 0;
+}
+.ic {
+	z-index: 10;
+	color: var(--prim);
+}
+.body--dark .q-tree--standard {
+	color: #5c4f41;
 }
 </style>

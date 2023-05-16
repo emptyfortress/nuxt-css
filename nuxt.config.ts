@@ -6,6 +6,21 @@ export default defineNuxtConfig({
 		extras: {
 			fontIcons: ['mdi-v6'],
 		},
+		plugins: ['Notify', 'Loading'],
+		config: {
+			notify: {
+				position: 'top-right',
+				timeout: 3000,
+				icon: 'mdi-alert',
+				color: 'primary',
+				classes: 'notific',
+			},
+			loading: {
+				delay: 100,
+				html: true,
+				spinnerSize: 120,
+			},
+		},
 		/* */
 	},
 	css: ['@/assets/styles/main.scss'],
