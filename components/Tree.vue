@@ -10,6 +10,7 @@
 		node-key="id"
 		v-model:selected="selected"
 		v-model:expanded="expanded"
+		default-expand-all
 		:filter="filter")
 
 		template(v-slot:header-root="prop")

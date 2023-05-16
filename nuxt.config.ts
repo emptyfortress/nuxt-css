@@ -24,16 +24,16 @@ export default defineNuxtConfig({
 	// experimental: {
 	// 	viewTransition: true,
 	// },
-	// app: {
-	// 	pageTransition: {
-	// 		name: 'fade',
-	// 		mode: 'out-in', // default
-	// 	},
-	// 	layoutTransition: {
-	// 		name: 'slide',
-	// 		mode: 'out-in', // default
-	// 	},
-	// },
+	app: {
+		pageTransition: {
+			name: 'page',
+			mode: 'out-in', // default
+		},
+		layoutTransition: {
+			name: 'layout',
+			mode: 'out-in', // default
+		},
+	},
 	// 	motion: {
 	// 		directives: {
 	// 			fuck: {

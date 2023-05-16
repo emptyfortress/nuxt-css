@@ -1,15 +1,27 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const ratio = ref(300)
+</script>
 
 <template lang="pug">
 div
+	Html
+		Head
+			Title CSS variables
 	header
 		.title
 			q-icon(name="mdi-language-css3" size="lg")
 			div CSS variables
-			// q-btn(label="Next" color="primary" to="/test")
-			// q-btn(label="back" color="primary" to="/")
 		Switcher
-	NuxtPage
+	// NuxtPage
+	.container
+		q-splitter(v-model="ratio" unit="px" )
+			template(v-slot:before)
+				q-scroll-area.home
+					Tree
+
+			template(v-slot:after)
+				q-scroll-area.home
+					slot
 </template>
 
 <style scoped lang="scss">
@@ -33,5 +45,8 @@ header {
 	flex-grow: 1;
 	gap: 0.5rem;
 	font-size: 1.2rem;
+}
+.home {
+	height: calc(100vh - 60px);
 }
 </style>
