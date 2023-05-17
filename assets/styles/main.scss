@@ -38,3 +38,21 @@ a:hover {
 .notific {
 	transition: 0.3s ease all;
 }
+h4 {
+	margin-bottom: 1rem;
+}
+
+.panel {
+	border: 1px solid var(--border-color);
+	background: var(--bg-card);
+	font-size: 1rem;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding: 1rem;
+	gap: 1rem;
+	margin-bottom: 1rem;
+	position: relative;
+	.zg {
+		margin-bottom: 0.5rem;
+	}
+}

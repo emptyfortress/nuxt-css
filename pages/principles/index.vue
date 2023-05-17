@@ -2,7 +2,7 @@
 
 <template lang="pug">
 div
-	h2 Principles
+	h4 Principles
 </template>
 
 <style scoped lang="scss"></style>
