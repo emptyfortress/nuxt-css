@@ -1,28 +1,27 @@
 {
-    "dependencies": {
-        "@quasar/extras": "^1.16.3",
-        "@vueuse/motion": "^2.0.0-beta.27",
-        "nuxt-icons": "^3.2.1",
-        "quasar": "^2.11.10",
-        "sass": "^1.62.1",
-        "vue-word-highlighter": "^1.2.3"
-    },
-    "devDependencies": {
-        "@nuxt/devtools": "^0.4.6",
-        "@types/node": "^18",
-        "@volar/vue-language-plugin-pug": "^1.6.4",
-        "nuxt": "^3.4.3",
-        "nuxt-quasar-ui": "^1.7.3",
-        "prettier": "^2.8.8",
-        "pug": "^3.0.2"
-    },
-    "name": "nuxt-css",
-    "private": true,
-    "scripts": {
-        "build": "nuxt build",
-        "dev": "nuxt dev",
-        "generate": "nuxt generate",
-        "postinstall": "nuxt prepare",
-        "preview": "nuxt preview"
-    }
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@types/node": "^18",
+    "@volar/vue-language-plugin-pug": "^1.6.5",
+    "nuxt": "^3.5.0",
+    "nuxt-quasar-ui": "^1.7.3",
+    "prettier": "^2.8.8",
+    "pug": "^3.0.2"
+  },
+  "dependencies": {
+    "@quasar/extras": "^1.16.3",
+    "@vueuse/motion": "^2.0.0-beta.27",
+    "nuxt-icons": "^3.2.1",
+    "quasar": "^2.12.0",
+    "sass": "^1.62.1",
+    "vue-word-highlighter": "^1.2.3"
+  }
 }
