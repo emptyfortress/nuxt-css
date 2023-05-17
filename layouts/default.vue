@@ -1,6 +1,7 @@
 <script setup lang="ts">
 const ratio = ref(300)
 
+const { nodes } = useNodes()
 const router = useRouter()
 
 const home = () => {
@@ -23,7 +24,7 @@ div
 		q-splitter(v-model="ratio" unit="px" )
 			template(v-slot:before)
 				q-scroll-area.home
-					Tree.q-mt-lg
+					Tree.q-mt-lg(:nodes="nodes")
 
 			template(v-slot:after)
 				q-scroll-area.home
@@ -54,10 +55,11 @@ header {
 }
 .grow {
 	flex-grow: 1;
-	// background: red;
-	// height: 100%;
 }
 .home {
 	height: calc(100vh - 60px);
+	:deep(.q-scrollarea__thumb--v) {
+		width: 5px;
+	}
 }
 </style>

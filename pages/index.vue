@@ -4,6 +4,8 @@ import { useMotion } from '@vueuse/motion'
 const logo = ref<HTMLElement>()
 const dv = ref<HTMLElement>()
 
+const { node } = useNodes()
+
 const { apply: rotatelogo } = useMotion(logo, {
 	initial: {
 		rotate: 0,
@@ -59,14 +61,14 @@ const rotate = async () => {
 <template lang="pug">
 div
 	.title
-		.row.q-gutter-x-sm
-			img(ref="dv" src="/webclient.svg" @click="mov").dv
-			div Web client
-		img(ref="logo" src="/logo1.png" @click="rotate").logo
+		div Web client
+		img(ref="logo" src="/logo.svg" @click="rotate").logo
 	.panel
+		img(ref="dv" src="/webclient.svg" @click="mov").dv
 		div
-			.zg Zagolovok
-			p Lorem ipsum dolor sit amet consectetur, adipisicing elit. Fugit omnis repellendus labore esse quia praesentium quisquam nemo, odit excepturi accusantium nostrum maxime cum accusamus pariatur quas, veniam necessitatibus aperiam exercitationem.
+			p Web-клиент – полнофункциональное рабочее место пользователя Docsvision, которое предоставляет доступ к системе через любую ОС  и любой интернет-браузер, без необходимости установки на устройство пользователя приложения или дополнительного ПО.
+			p Здесь собрана информация про использовании css-переменных в веб-клиенте, и их кастомизацию.
+	// Next(next="/principles")
 </template>
 
 <style scoped lang="scss">
@@ -77,13 +79,13 @@ div
 	justify-content: space-between;
 	margin-bottom: 0.5rem;
 	img {
-		// width: 42px;
-		height: 42px;
+		height: 36px;
 	}
 }
 .logo,
 .dv {
 	transform-origin: left 50%;
 	z-index: 3;
+	cursor: pointer;
 }
 </style>

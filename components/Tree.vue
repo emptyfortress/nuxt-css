@@ -4,7 +4,7 @@
 		q-input(v-model="filter" autofocus placeholder="Поиск" dense clearable clear-icon="mdi-close-circle" @clear="filter = ''").search
 			template(v-slot:prepend)
 				q-icon(name="mdi-magnify")
-	q-tree(ref="tree" :nodes="nodes"
+	q-tree(ref="tree" :nodes="props.nodes"
 		icon='mdi-chevron-right'
 		node-key="url"
 		v-model:selected="selected"
@@ -34,7 +34,11 @@
 
 <script setup lang="ts">
 import WordHighlighter from 'vue-word-highlighter'
-import { nodes } from '@/data/data'
+
+interface TreeProps {
+	nodes: Item[]
+}
+const props = defineProps<TreeProps>()
 
 const tree = ref()
 const filter = ref('')

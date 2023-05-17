@@ -1,6 +1,5 @@
 const nodes = [
 	{
-		id: 0,
 		label: 'Web Client',
 		header: 'root',
 		avatar: '/webclient.svg',
@@ -8,39 +7,38 @@ const nodes = [
 		url: '/',
 		children: [
 			{
-				id: 1,
 				label: 'Principles',
 				icon: 'mdi-folder-outline',
 				url: '/principles',
 				children: [
 					{
-						id: 2,
 						label: 'Primary colors',
 						icon: 'mdi-numeric-1-circle-outline',
 						url: '/principles/primary',
 					},
 					{
-						id: 3,
 						label: 'Secondary colors',
 						icon: 'mdi-numeric-2-circle-outline',
 						url: '/principles/secondary',
 					},
+					{
+						label: 'Светофор',
+						icon: 'mdi-traffic-light',
+						url: '/principles/traffic',
+					},
 				],
 			},
 			{
-				id: 4,
 				label: 'Variables',
 				icon: 'mdi-folder-outline',
 				url: '/variables',
 				children: [
 					{
-						id: 6,
 						label: 'Primary colors',
 						icon: 'mdi-folder-outline',
 						url: '/variables/primary',
 						children: [
 							{
-								id: 7,
 								label: 'color-dark',
 								variable: true,
 								icon: 'mdi-variable',
@@ -49,7 +47,6 @@ const nodes = [
 								desc: 'Используется в качестве <code>primary color</code> в дефолтной теме DV для всех страниц, кроме Заданий и Документов.<br />Является частью <b>cветофора</b>.',
 							},
 							{
-								id: 8,
 								label: 'color-doc',
 								variable: true,
 								icon: 'mdi-variable',
@@ -58,7 +55,6 @@ const nodes = [
 								desc: 'Используется в качестве <code>primary color</code> для Документов.<br />Является частью <b>cветофора</b>.',
 							},
 							{
-								id: 9,
 								label: 'color-task',
 								variable: true,
 								traffic: true,
@@ -67,7 +63,6 @@ const nodes = [
 								desc: 'Используется в качестве <code>primary color</code> для Заданий.<br />Является частью <b>cветофора</b>.',
 							},
 							{
-								id: 10,
 								label: 'color-link',
 								variable: true,
 								icon: 'mdi-variable',
@@ -77,62 +72,53 @@ const nodes = [
 						],
 					},
 					{
-						id: 11,
 						label: 'Secondary colors',
 						icon: 'mdi-folder-outline',
 						url: '/variables/secondary',
 						children: [
 							{
-								id: 12,
 								label: 'error-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/error',
 							},
 							{
-								id: 13,
 								label: 'pink-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/pink',
 							},
 							{
-								id: 14,
 								label: 'accent-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/accent',
 							},
 							{
-								id: 15,
 								label: 'info-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/info',
 							},
 							{
-								id: 16,
 								label: 'warning-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/warning',
 							},
 							{
-								id: 17,
 								label: 'success-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/success',
 							},
 							{
-								id: 18,
 								label: 'red-color',
 								variable: true,
 								icon: 'mdi-variable',
 								url: '/variables/secondary/red',
 							},
 							{
-								id: 19,
 								label: 'draggable-color',
 								variable: true,
 								icon: 'mdi-variable',
@@ -143,13 +129,12 @@ const nodes = [
 				],
 			},
 			{
-				id: 20,
 				label: 'Controls',
 				icon: 'mdi-folder-outline',
 				url: '/controls',
 				children: [
-					{ id: 21, label: 'Button', icon: 'mdi-xml', url: '/controls/button' },
-					{ id: 22, label: 'Input', icon: 'mdi-xml', url: '/controls/input' },
+					{ label: 'Button', url: '/controls/button', icon: 'mdi-xml' },
+					{ label: 'Input', url: '/controls/input', icon: 'mdi-xml' },
 				],
 			},
 		],
