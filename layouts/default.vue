@@ -29,6 +29,7 @@ div
 			template(v-slot:after)
 				q-scroll-area.home
 					slot
+				Next
 </template>
 
 <style scoped lang="scss">

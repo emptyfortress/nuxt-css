@@ -1,5 +1,4 @@
 interface Item {
-	id?: number
 	label: string
 	header?: string
 	avatar?: string
@@ -7,6 +6,8 @@ interface Item {
 	traffic?: boolean
 	icon?: string
 	url?: RouteLocationRaw
+	next?: RouteLocationRaw
+	prev?: RouteLocationRaw
 	variable?: boolean
 	children?: Item[]
 }
