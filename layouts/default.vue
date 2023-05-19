@@ -1,12 +1,14 @@
 <script setup lang="ts">
 const ratio = ref(300)
 
-const { nodes } = useNodes()
+const { nodes, flat } = useNodes()
 const router = useRouter()
 
 const home = () => {
 	router.push('/')
 }
+console.log(nodes)
+// console.log(flat)
 </script>
 
 <template lang="pug">
