@@ -5,7 +5,7 @@ const { node } = useNodes()
 <template lang="pug">
 div
 	h2 Hellolll
-	pre {{ node }}
+	// pre {{ node }}
 </template>
 
 <style scoped lang="scss"></style>

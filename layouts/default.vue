@@ -1,14 +1,12 @@
 <script setup lang="ts">
 const ratio = ref(300)
 
-const { nodes, flat } = useNodes()
+const { nodes, node } = useNodes()
 const router = useRouter()
 
 const home = () => {
 	router.push('/')
 }
-console.log(nodes)
-// console.log(flat)
 </script>
 
 <template lang="pug">
@@ -31,7 +29,7 @@ div
 			template(v-slot:after)
 				q-scroll-area.home
 					slot
-				Next
+				Next(:index="node?.id")
 </template>
 
 <style scoped lang="scss">

@@ -1,4 +1,5 @@
 interface Item {
+	id: number
 	label: string
 	header?: string
 	avatar?: string

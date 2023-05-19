@@ -20,8 +20,13 @@ const getMembers = (members: any[]): any[] => {
 		.concat(children.length ? getMembers(children) : children)
 }
 
-const flat = getMembers([...nodes])
+const compare = (a: Item, b: Item) => {
+	return a.id - b.id
+}
+
+let flat = getMembers([...nodes])
+let flatten = flat.sort(compare)
 
 export const useNodes = () => {
-	return { nodes, node, flat }
+	return { nodes, node, flatten }
 }
