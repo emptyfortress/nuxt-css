@@ -1,10 +1,10 @@
 <script setup lang="ts">
-const route = useRoute()
+const { node } = useNodes()
 </script>
 
 <template lang="pug">
 div
-	h2 primary members {{ route.params.id }}
+	h4 {{ node?.label }}
 </template>
 
 <style scoped lang="scss"></style>

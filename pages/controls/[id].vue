@@ -1,9 +1,10 @@
 <script setup lang="ts">
-const route = useRoute()
+const { node } = useNodes()
 </script>
 
 <template lang="pug">
-h2 controls - {{ route.params.id }}
+div
+	h4 {{ node?.label }}
 </template>
 
 <style scoped lang="scss"></style>

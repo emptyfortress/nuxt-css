@@ -1,7 +1,8 @@
 <script setup lang="ts"></script>
 
 <template lang="pug">
-h2 controls
+div
+	h4 controls
 </template>
 
 <style scoped lang="scss"></style>

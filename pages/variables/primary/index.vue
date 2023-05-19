@@ -20,7 +20,7 @@ const coping = () => {
 
 <template lang="pug">
 div
-	h2(@click="coping" :class="{'animate-bounce-one' : copy}") Primary colors
+	h4(@click="coping" :class="{'animate-bounce-one' : copy}") Primary colors
 </template>
 
 <style scoped lang="scss"></style>
