@@ -20,11 +20,21 @@ div
 				li Primary colors содержит не один цвет (как обычно), а три.
 				li Эти три цвета составляют так называемый "светофор".
 				li Задавая значения всего <span class="color-orange fw-bold">20-30 переменным</span> мы полностью управляем внешним видом приложения.
-	// h6.my-0 Themes
-	// .panel
-	// 	q-icon(name="mdi-brightness-4" size="xl" color="primary")
-	// 	div Довольно часто использованные цвета в веб-клиенте слегка отличаются друг от друга.<br />С целью унификации и перехода к пользовательским темам вводится ряд css-переменных.
-				
+
+	.panel.note
+		q-icon(name="mdi-reminder" size="xl" color="primary")
+		div
+			.fw-bold Примечание
+			p.mb-0 Везде указаны "нормализованные" (правильные) значения цветов. Именно их и нужно использовать.
+
+	.panel.warn
+		q-icon(name="mdi-reminder" size="xl" color="primary")
+		div
+			.fw-bold Примечание
+			p.mb-0 Чтобы скопировать переменную или ее значение кликните по ней:
+			h6.my-4
+				AnimZag(zag="try-me")
+
 </template>
 
 <style scoped lang="scss"></style>

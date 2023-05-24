@@ -52,6 +52,7 @@ h4 {
 	gap: 1rem;
 	margin-bottom: 1rem;
 	position: relative;
+	border-radius: 0.25rem;
 	.zg {
 		margin-bottom: 0.5rem;
 		font-weight: 500;
@@ -70,4 +71,10 @@ code {
 	padding: 1px 10px;
 	background: var(--bg-code);
 	color: crimson;
+}
+.warn {
+	background: var(--bg-warn);
+}
+.note {
+	background: var(--bg-note);
 }

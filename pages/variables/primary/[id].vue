@@ -4,7 +4,9 @@ const { node } = useNodes()
 
 <template lang="pug">
 div
-	AnimZag(:zag="node?.label")
+	h4
+		AnimZag(:zag="node?.label")
+	p fuck
 </template>
 
 <style scoped lang="scss"></style>

@@ -41,6 +41,8 @@
 	--my-tab-bar-background: #241f19;
 	--my-card-background: #241f19;
 	--bg-code: var(--my-color-step-950);
+	--bg-note: #e9f2fc;
+	--bg-warn: #fdf3e8;
 
 	--color-dark: #2c4159;
 	--color-doc: #2196f3;
@@ -64,6 +66,8 @@ body.body--dark {
 	--icon: var(--dark-text-color);
 	--bg-code: var(--my-color-step-50);
 	--text-secondary: var(--my-color-step-350);
+	--bg-note: hsl(212 76% 10% / 1);
+	--bg-warn: hsl(31 84% 15% / 1);
 }
 .q-list--dark,
 .q-item--dark {
