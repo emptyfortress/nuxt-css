@@ -27,13 +27,12 @@ div
 			.fw-bold Примечание
 			p.mb-0 Везде указаны "нормализованные" (правильные) значения цветов. Именно их и нужно использовать.
 
-	.panel.warn
+	.panel.note
 		q-icon(name="mdi-reminder" size="xl" color="primary")
 		div
 			.fw-bold Примечание
 			p.mb-0 Чтобы скопировать переменную или ее значение кликните по ней:
-			h6.my-4
-				AnimZag(zag="try-me")
+			AnimZag
 
 </template>
 

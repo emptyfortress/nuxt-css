@@ -4,7 +4,7 @@ import { useQuasar } from 'quasar'
 const props = defineProps({
 	zag: {
 		type: String,
-		default: '',
+		default: 'try-me',
 	},
 })
 
