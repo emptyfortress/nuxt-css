@@ -1,8 +1,7 @@
 <script setup lang="ts"></script>
 
 <template lang="pug">
-div
-	h4 Primary colors
+h4 Additional colors
 </template>
 
 <style scoped lang="scss"></style>

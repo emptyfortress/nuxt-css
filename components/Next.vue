@@ -20,9 +20,10 @@ const next = computed(() => {
 
 <template lang="pug">
 .next.q-gutter-x-xs
-	Transition(name="fade")
-		q-btn(round color="secondary" icon="mdi-chevron-left" :to="prev" v-if="props.index > 0")
-	q-btn(round color="secondary" icon="mdi-chevron-right" :to="next" :disable="(props.index === flatten.length - 1)")
+	client-only
+		Transition(name="fade")
+			q-btn(round color="secondary" icon="mdi-chevron-left" :to="prev" v-if="props.index > 0")
+		q-btn(round color="secondary" icon="mdi-chevron-right" :to="next" :disable="props.index === flatten.length - 1")
 </template>
 
 <style scoped lang="scss">

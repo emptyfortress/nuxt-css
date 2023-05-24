@@ -1,6 +1,5 @@
-// https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-	modules: ['nuxt-quasar-ui', 'nuxt-icons', '@vueuse/motion/nuxt'],
+	modules: ['nuxt-quasar-ui', 'nuxt-icons', '@vueuse/motion/nuxt', '@unocss/nuxt'],
 	quasar: {
 		sassVariables: 'assets/styles/quasar.variables.scss',
 		extras: {

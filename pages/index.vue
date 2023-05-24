@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { useMotion } from '@vueuse/motion'
+import { useQuasar } from 'quasar'
 
+const $q = useQuasar()
 const logo = ref<HTMLElement>()
 const dv = ref<HTMLElement>()
-
-const { node } = useNodes()
 
 const { apply: rotatelogo } = useMotion(logo, {
 	initial: {
@@ -48,6 +48,11 @@ const mov = async () => {
 	await move('fly2')
 	await move('fly3')
 	await move('fly4')
+	$q.notify({
+		message: 'Ты нашел пасхалку!',
+		icon: 'mdi-cow',
+		color: 'accent',
+	})
 }
 const rotate = async () => {
 	await rotatelogo({
@@ -55,6 +60,11 @@ const rotate = async () => {
 	})
 
 	await rotatelogo('enter')
+	$q.notify({
+		message: 'Ты нашел пасхалку!',
+		icon: 'mdi-cow',
+		color: 'accent',
+	})
 }
 </script>
 
@@ -66,8 +76,8 @@ div
 	.panel
 		img(ref="dv" src="/webclient.svg" @click="mov").dv
 		div
-			p Web-клиент – полнофункциональное рабочее место пользователя Docsvision, которое предоставляет доступ к системе через любую ОС  и любой интернет-браузер, без необходимости установки на устройство пользователя приложения или дополнительного ПО.
 			p Здесь собрана информация про использовании css-переменных в веб-клиенте, и их кастомизацию.
+			p.font-italic.text-sm Web-клиент – полнофункциональное рабочее место пользователя Docsvision, которое предоставляет доступ к системе через любую ОС  и любой интернет-браузер, без необходимости установки на устройство пользователя приложения или дополнительного ПО.
 </template>
 
 <style scoped lang="scss">
