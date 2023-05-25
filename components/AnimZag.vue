@@ -29,9 +29,9 @@ const coping = () => {
 
 <template lang="pug">
 .cursor-pointer(ref="text" :class="{one : copy}" @click="coping")
-		|var(--{{props.zag}})
-		q-btn.ml-1em(round flat)
-			q-icon(:name="copy ? 'mdi-check' : 'mdi-content-copy'")
+	|var(--{{ props.zag}})
+	q-btn.ml-1em(round flat)
+		q-icon(:name="copy ? 'mdi-check' : 'mdi-content-copy'" style="font-size: 18px;")
 </template>
 
 <style scoped lang="scss">

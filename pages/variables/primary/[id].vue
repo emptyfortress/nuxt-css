@@ -6,7 +6,6 @@ const { node } = useNodes()
 div
 	h4
 		AnimZag(:zag="node?.label")
-	p fuck
 </template>
 
 <style scoped lang="scss"></style>

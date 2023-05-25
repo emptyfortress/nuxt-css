@@ -1,11 +1,5 @@
 // uno.config.ts
-import {
-	defineConfig,
-	presetAttributify,
-	presetUno,
-	transformerDirectives,
-	transformerVariantGroup,
-} from 'unocss'
+import { defineConfig, presetUno, transformerDirectives } from 'unocss'
 import extractorPug from '@unocss/extractor-pug'
 
 export default defineConfig({
@@ -13,7 +7,7 @@ export default defineConfig({
 	theme: {
 		colors: {},
 	},
-	presets: [presetUno(), presetAttributify()],
+	presets: [presetUno()],
 	extractors: [extractorPug()],
-	transformers: [transformerDirectives(), transformerVariantGroup()],
+	transformers: [transformerDirectives()],
 })

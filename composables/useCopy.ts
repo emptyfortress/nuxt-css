@@ -1,6 +1,4 @@
-import { useQuasar } from 'quasar'
-
-const $q = useQuasar()
+import { Notify } from 'quasar'
 
 const copy = ref(false)
 const text = ref()
@@ -9,7 +7,7 @@ const coping = () => {
 	copy.value = true
 	navigator.clipboard.writeText(text.value.innerText)
 	setTimeout(() => {
-		$q.notify({
+		Notify.create({
 			message: 'Скопировано',
 			icon: 'mdi-check',
 			color: 'primary',
@@ -19,5 +17,5 @@ const coping = () => {
 }
 
 export const useCopy = () => {
-	return { copy, text, coping }
+	return { copy, coping }
 }

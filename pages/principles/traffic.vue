@@ -1,4 +1,17 @@
-<script setup lang="ts"></script>
+<script setup lang="ts">
+const slide = ref(1)
+
+const items = [
+	{
+		id: 1,
+		className: 'dark',
+		label: 'Дашборд и вспомогательные страницы',
+		val: 'var(--color-dark)',
+	},
+	{ id: 2, className: 'doc', label: 'Документы', val: 'var(--color-doc)' },
+	{ id: 3, className: 'task', label: 'Задания', val: 'var(--color-task)' },
+]
+</script>
 
 <template lang="pug">
 div
@@ -7,44 +20,22 @@ div
 		q-icon(name="mdi-traffic-light" size="xl" color="primary")
 		div
 			p Светофором мы называем основную триаду первичных цветов ДВ.
-			p Обычно в приложениях есть один основной цвет, который считается <code>primary</code>. В веб-клиенте таких цветов три. Отсюда - светофор.
-			p Соответствие цветов светофора и разделов веб-клиента:
-			div
-				.bl
-					.common.dark
-					div Дашборд и вспомогательные страницы
-				.bl
-					.common.doc
-					div Документы
-				.bl
-					.common.task
-					div Задания
+			p Обычно в приложениях есть один основной цвет, который считается <code>primary color</code>. Это цвет, который чаще всего отображается в компонентах вашего приложения. В веб-клиенте этот цвет является динамическим. То есть, его значение зависит от раздела веб-клиента, которых три. Отсюда название - светофор.
+			p Соответствие <code>primary color</code> и разделов веб-клиента:
+			TrafficSample(v-for="item in items" :key="item.id" :label="item.label" :className="item.className" :val="item.val")
 
+	.panel
+		q-icon(name="mdi-image-multiple-outline" size="xl" color="primary")
+		div
+			p Разделы веб-клиента в цветах светофора:
+			q-carousel(v-model="slide" transition-prev="slide-right" transition-next="slide-left" animated thumbnails infinite)
+				q-carousel-slide(:name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg")
+				q-carousel-slide(:name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg")
+				q-carousel-slide(:name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg")
+	br
+	br
+	br
+	br
 </template>
 
-<style scoped lang="scss">
-.bl {
-	display: flex;
-	justify-content: flex-start;
-	align-items: center;
-	gap: 1rem;
-}
-.common {
-	width: 48px;
-	height: 48px;
-	border-radius: 50%;
-	margin-bottom: 0.5rem;
-	border: 4px solid var(--bg-header);
-	box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
-	cursor: pointer;
-}
-.dark {
-	background: var(--color-dark);
-}
-.doc {
-	background: var(--color-doc);
-}
-.task {
-	background: var(--color-task);
-}
-</style>
+<style scoped lang="scss"></style>
