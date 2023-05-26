@@ -20,31 +20,39 @@ div
 		div
 			h6.my0 Primary colors
 			p
-				code primary colors
+				Chip(label="primary color" url="/variables/primary")
 				|содержат в названии слово
 				b.mx2 color
 				|и название раздела. При этом, color идет первым:
 			ul.mb0
-				li --color-dark
-				li --color-doc
+				li
+					code --color-dark
+				li
+					code --color-doc
 	.panel
 		q-icon(name="mdi-numeric-2-circle-outline" size="xl" color="primary")
 		div
 			h6.my0 Secondary colors
 			p Слово color идет вторым, после определения:
 			ul.mb0
-				li --error-color
-				li --info-color
+				li
+					code  --error-color
+				li
+					code  --info-color
 	.panel
 		q-icon(name="mdi-numeric-3-circle-outline" size="xl" color="primary")
 		div
 			h6.my0 Additional colors
 			p Переменная либо содержит в себе название цвета, либо прямо указывает на назначение переменной. Если непонятно, что речь идет о цвете, добавляется слово color:
 			ul.mb0
-				li --grey30
-				li --bg-main
-				li --bg-selected
-				li --shadow-color
+				li
+					code   --grey30
+				li
+					code  --bg-main
+				li
+					code --bg-selected
+				li
+					code --shadow-color
 
 
 </template>

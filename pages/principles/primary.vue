@@ -19,14 +19,14 @@ div
 		q-icon(name="mdi-palette" size="xl" color="primary")
 		div
 			p.mb0 В веб-клиенте в состав
-				code primary colors
+				Chip(label="primary colors" url="/variables/primary")
 				span помимо
-				NuxtLink.link(to="/principles/traffic") &nbsp;светофора&nbsp;
+				Chip(label="светофора" url="/principles/traffic")
 				|входит также цвет
 				b.ml2 html-линков.
 			p Это сделано потому, что довольно часто (при брендировании) цвет линков совпадает с ключевым цветом. В нашем случае это не так. Отдельная переменная для линков позволяет настраивать его независимо от ключевого цвета.
 			p
-				code Primary colors
+				Chip(label="primary colors" url="/variables/primary")
 				|являются
 				b.mx2 ключевыми
 				|и определяют внешний вид приложения:

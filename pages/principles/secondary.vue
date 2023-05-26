@@ -7,9 +7,9 @@ div
 		q-icon(name="mdi-palette" size="xl" color="primary")
 		div
 			p
-				code Secondary colors
+				Chip(label="secondary colors")
 				|- это группа цветов, которые используются не так часто, как
-				code primary
+				Chip(label="primary" url="/variables/primary")
 				|и служат для акцентирования элементов интерфейса.
 			p Обычно сюда входят цвета для предупреждений, сообщений об ошибках, информационных сообщений и тп.:
 			ul.mb-0
@@ -31,7 +31,7 @@ div
 		div
 			.fw-bold Примечание
 			p.mb-0 Эти цвета не зависят от
-				code primary
+				Chip(label="primary" url="/variables/primary")
 				|и могут редактироваться независимо при настройке
 				NuxtLink.link.ml-2(to="/principles/theme") тем.
 </template>
