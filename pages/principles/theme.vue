@@ -25,9 +25,12 @@ div
 				b.mx-2 светофора
 				|необходимо назначить одинаковые значения 3 переменным:
 			ul
-				li color-dark
-				li color-doc
-				li color-task
+				li
+					NuxtLink.link(to="/variables/primary/dark") color-dark
+				li
+					NuxtLink.link(to="/variables/primary/doc") color-doc
+				li
+					NuxtLink.link(to="/variables/primary/task") color-task
 			p.mb-0 При этом цвет текста в основных элементах интерфейса (например, кнопках) должен подстроиться автоматически.
 </template>
 

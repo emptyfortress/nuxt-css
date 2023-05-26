@@ -24,7 +24,8 @@ div
 		div
 			.fw-bold Где используются:
 			ul.mb-0
-				li Оформление модальных окон сообщений
+				li Оформление модальных окон сообщений платформы
+				li Цвет вспомогательных иконок
 	.panel.note
 		q-icon(name="mdi-reminder" size="xl" color="primary")
 		div
