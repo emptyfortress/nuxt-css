@@ -12,3 +12,10 @@ interface Item {
 	variable?: boolean
 	children?: Item[]
 }
+
+interface Color {
+	id: number
+	label: string
+	var: string
+	val: string
+}

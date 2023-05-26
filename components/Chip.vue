@@ -22,4 +22,7 @@ NuxtLink(:to="props.url")
 	color: var(--prim);
 	font-weight: 600;
 }
+body.body--dark .q-chip {
+	background: #4e4336;
+}
 </style>

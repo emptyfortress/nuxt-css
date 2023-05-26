@@ -36,9 +36,9 @@ div
 			p Слово color идет вторым, после определения:
 			ul.mb0
 				li
-					code  --error-color
+					code --error-color
 				li
-					code  --info-color
+					code --info-color
 	.panel
 		q-icon(name="mdi-numeric-3-circle-outline" size="xl" color="primary")
 		div
@@ -46,9 +46,9 @@ div
 			p Переменная либо содержит в себе название цвета, либо прямо указывает на назначение переменной. Если непонятно, что речь идет о цвете, добавляется слово color:
 			ul.mb0
 				li
-					code   --grey30
+					code --grey30
 				li
-					code  --bg-main
+					code --bg-main
 				li
 					code --bg-selected
 				li
