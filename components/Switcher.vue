@@ -95,7 +95,6 @@ const theme = () => {
 <style scoped lang="scss">
 svg {
 	cursor: pointer;
-	// transform-origin: unset unset;
 	&:hover {
 		#hover {
 			fill: hsla(0, 0%, 0%, 0.1);

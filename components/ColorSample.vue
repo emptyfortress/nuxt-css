@@ -1,13 +1,30 @@
 <script setup lang="ts">
 import { useQuasar } from 'quasar'
 
-const props = defineProps<{ item: Color; mode: Boolean }>()
+interface PropType {
+	item: Color
+	mode: Boolean
+	size: String
+	big: Boolean
+}
+
+const props = withDefaults(defineProps<PropType>(), {
+	size: () => '150px',
+	big: () => false,
+})
 
 const color = computed(() => {
 	return props.item.var
 })
+const textColor = computed(() => {
+	return props.item.textColor
+})
+
 const label = computed(() => {
 	return props.mode ? props.item.val : props.item.label
+})
+const copiedValue = computed(() => {
+	return props.mode ? label.value : 'var(--' + label.value + ')'
 })
 
 const $q = useQuasar()
@@ -16,10 +33,10 @@ const sample = ref()
 
 const coping = () => {
 	copy.value = true
-	navigator.clipboard.writeText(sample.value?.innerText)
+	navigator.clipboard.writeText(copiedValue.value)
 	setTimeout(() => {
 		$q.notify({
-			message: 'Скопировано: ' + label.value,
+			message: 'Скопировано',
 			icon: 'mdi-check',
 			color: 'primary',
 		})
@@ -35,7 +52,8 @@ const calcClass = computed(() => {
 </script>
 
 <template lang="pug">
-.sample(ref="sample" :class="calcClass" @click="coping") {{label}}
+.sample(ref="sample" :class="calcClass" @click="coping")
+	span(v-show="big") --{{label}}
 </template>
 
 <style scoped lang="scss">
@@ -43,15 +61,15 @@ const calcClass = computed(() => {
 	--at-apply: animate-bounce-alt animate-count-1;
 }
 .sample {
-	width: 150px;
-	height: 150px;
+	width: v-bind(size);
+	height: v-bind(size);
 	border-radius: 50%;
 	border: 5px solid white;
 	display: flex;
 	align-items: center;
 	justify-content: center;
 	background: v-bind(color);
-	color: white;
+	color: v-bind(textColor);
 	cursor: pointer;
 	font-size: 1.1rem;
 	&:hover {

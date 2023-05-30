@@ -33,7 +33,11 @@ div
 		q-icon(name="mdi-numeric-2-circle-outline" size="xl" color="primary")
 		div
 			h6.my0 Secondary colors
-			p Слово color идет вторым, после определения:
+			// p Слово color идет вторым, после определения:
+			Chip(label="secondary color" url="/variables/secondary")
+			|содержат в названии назначение цвета и слово 
+			b.mx2 color
+			|При этом, color идет вторым:
 			ul.mb0
 				li
 					code --error-color

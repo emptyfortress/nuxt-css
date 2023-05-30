@@ -49,6 +49,16 @@
 	--color-doc: #2196f3;
 	--color-task: #6dae50;
 	--color-link: hsl(207 90% 40% / 1);
+
+	--error-color: hsl(353, 100%, 26%);
+	--pink-color: hsl(353, 100%, 88%);
+	--accent-color: #9c27b0;
+	--info-color: hsl(223, 91%, 74%);
+	--warning-color: hsl(30, 100%, 50%);
+	--success-color: hsl(122, 39%, 49%);
+	--success-color-hover: hsl(122, 39%, 59%);
+	--red-color: hsl(340, 100%, 50%);
+	--draggable-color: #3bff00;
 }
 
 body.body--dark {

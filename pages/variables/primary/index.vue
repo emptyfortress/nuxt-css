@@ -1,10 +1,5 @@
 <script setup lang="ts">
-const items = [
-	{ id: 1, label: '--color-dark', var: 'var(--color-dark)', val: 'laks' },
-	{ id: 2, label: '--color-doc', var: 'var(--color-doc)', val: 'laks' },
-	{ id: 3, label: '--color-task', var: 'var(--color-task)', val: 'laks' },
-	{ id: 4, label: '--color-link', var: 'var(--color-link)', val: 'laks' },
-]
+import { primaryVars } from '@/data/vars'
 
 const mode = ref(false)
 </script>
@@ -13,16 +8,12 @@ const mode = ref(false)
 div
 	h4
 		|Primary colors
-		q-toggle(v-model="mode")
-	.panel
-		.mygrid
-			ColorSample(v-for="item in items" :key="item.id" :item="item" :mode="mode")
+		VarSwitcher(v-model="mode")
+	.mygrid
+		ColorSample(v-for="item in primaryVars" :key="item.id" :item="item" :mode="mode" :big="true")
 </template>
 
 <style scoped lang="scss">
-.panel {
-	display: block;
-}
 .mygrid {
 	display: flex;
 	justify-items: start;
@@ -31,5 +22,9 @@ div
 }
 h4 {
 	--at-apply: flex justify-between items-center;
+	svg {
+		color: var(--icon);
+		margin-left: 1rem;
+	}
 }
 </style>

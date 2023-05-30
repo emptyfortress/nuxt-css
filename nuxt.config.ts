@@ -8,7 +8,7 @@ export default defineNuxtConfig({
 		plugins: ['Notify', 'Loading'],
 		config: {
 			notify: {
-				position: 'top-right',
+				position: 'top',
 				timeout: 3000,
 				icon: 'mdi-alert',
 				color: 'primary',

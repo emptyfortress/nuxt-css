@@ -18,4 +18,7 @@ interface Color {
 	label: string
 	var: string
 	val: string
+	folder?: string
+	textColor?: string
+	param?: string
 }
