@@ -13,6 +13,11 @@ interface Item {
 	children?: Item[]
 }
 
+interface LinkedVar {
+	label: string
+	val: string
+}
+
 interface Color {
 	id: number
 	label: string
@@ -21,4 +26,8 @@ interface Color {
 	folder?: string
 	textColor?: string
 	param?: string
+	info?: string
+	chips?: string[]
+	definition?: string
+	linked: LinkedVar[]
 }

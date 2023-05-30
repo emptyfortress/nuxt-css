@@ -44,10 +44,19 @@ div
 					|}
 				.square
 
-	.panel
+	.panel(v-if="item.linked")
 		q-icon(name="mdi-link-variant" size="xl" color="primary")
 		div
 			.fw-bold Связанные переменные
+			q-markup-table(flat)
+				thead
+					tr
+						th Имя
+						th Значение
+				tbody
+					tr(v-for="e in item.linked" :key="e.label")
+						td.code {{ e.label }}
+						td {{ e.val }}
 
 
 </template>
@@ -55,5 +64,14 @@ div
 <style scoped lang="scss">
 .square {
 	background: v-bind(color);
+}
+:deep(.q-table) {
+	width: initial;
+	thead th {
+		text-align: left;
+	}
+	tbody td {
+		font-size: 1rem;
+	}
 }
 </style>

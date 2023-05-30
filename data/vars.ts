@@ -11,6 +11,20 @@ const vars = [
 		info: 'Используется в качестве <b>primary color</b> в дефолтной теме DV для всех страниц, кроме Заданий и Документов.<br />Является частью <b>cветофора</b>.',
 		chips: ['primary', 'default', 'светофор'],
 		definition: '--color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));',
+		linked: [
+			{
+				label: '--color-dark-h',
+				val: '212',
+			},
+			{
+				label: '--color-dark-s',
+				val: '34%',
+			},
+			{
+				label: '--color-dark-l',
+				val: '26%',
+			},
+		],
 	},
 	{
 		id: 1,
@@ -22,6 +36,21 @@ const vars = [
 		param: 'doc',
 		info: 'Используется в качестве <b>primary color</b> для <b>Документов</b>.<br />Является частью <b>cветофора</b>.',
 		chips: ['primary', 'default', 'светофор'],
+		definition: '--color-doc: hsl(var(--color-doc-h), var(--color-doc-s), var(--color-doc-l));',
+		linked: [
+			{
+				label: '--color-doc-h',
+				val: '207',
+			},
+			{
+				label: '--color-doc-s',
+				val: '90%',
+			},
+			{
+				label: '--color-doc-l',
+				val: '54%',
+			},
+		],
 	},
 	{
 		id: 2,
@@ -31,6 +60,23 @@ const vars = [
 		folder: 'primary',
 		textColor: 'white',
 		param: 'task',
+		info: 'Используется в качестве <b>primary color</b> для <b>Заданий</b>.<br />Является частью <b>cветофора</b>.',
+		chips: ['primary', 'default', 'светофор'],
+		definition: '--color-task: hsl(var(--color-task-h), var(--color-task-s), var(--color-task-l));',
+		linked: [
+			{
+				label: '--color-task-h',
+				val: '101',
+			},
+			{
+				label: '--color-task-s',
+				val: '37%',
+			},
+			{
+				label: '--color-task-l',
+				val: '50%',
+			},
+		],
 	},
 	{
 		id: 3,
@@ -40,6 +86,23 @@ const vars = [
 		folder: 'primary',
 		textColor: 'white',
 		param: 'link',
+		info: 'Используется в качестве цвета текстовых <b>линков</b>.',
+		chips: ['primary', 'default'],
+		definition: '--color-link: hsl(var(--color-link-h), var(--color-link-s), var(--color-link-l));',
+		linked: [
+			{
+				label: '--color-link-h',
+				val: '207',
+			},
+			{
+				label: '--color-link-s',
+				val: '90%',
+			},
+			{
+				label: '--color-link-l',
+				val: '40%',
+			},
+		],
 	},
 
 	{
