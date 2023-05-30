@@ -41,6 +41,9 @@ a:hover {
 h4 {
 	margin-bottom: 1rem;
 }
+p:last-child {
+	margin-bottom: 0;
+}
 
 .panel {
 	border: 1px solid var(--border-color);
@@ -67,11 +70,34 @@ a.link {
 }
 
 code {
-	font-size: 1.1rem;
-	font-weight: 600;
+	font-family: Consolas, 'courier new', monospace;
+	font-size: 1rem;
 	padding: 1px 10px;
 	background: var(--bg-code);
 	color: crimson;
+}
+.code {
+	font-family: Consolas, 'courier new', monospace;
+	display: grid;
+	grid-template-columns: 1fr 165px;
+	align-items: center;
+	font-size: 1rem;
+	background: var(--bg-code);
+	color: crimson;
+	padding: 0.5rem;
+	border: 1px solid var(--border-color);
+	.inside {
+		margin-left: 1rem;
+	}
+	.square {
+		width: 100px;
+		height: 100px;
+		border: 5px solid black;
+		justify-self: center;
+	}
+	.full {
+		grid-column: 1/-1;
+	}
 }
 .warn {
 	background: var(--bg-warn);
@@ -79,4 +105,8 @@ code {
 .note {
 	background: var(--bg-note);
 	border: 1px solid var(--border-note);
+}
+.def {
+	font-size: 0.8rem;
+	color: grey;
 }

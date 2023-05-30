@@ -18,7 +18,7 @@ div
 	.panel
 		q-icon(name="mdi-palette" size="xl" color="primary")
 		div
-			p.mb0 В веб-клиенте в состав
+			p В веб-клиенте в состав
 				Chip(label="primary colors" url="/variables/primary")
 				span помимо
 				Chip(label="светофора" url="/principles/traffic")
@@ -46,7 +46,7 @@ div
 		q-icon(name="mdi-reminder" size="xl" color="primary")
 		div
 			.fw-bold Примечание
-			p.mb-0 Сюда же относятся дополнительные <code>hovers</code> цвета, но они вычисляются автоматически и мы их явно не указываем.
+			p Сюда же относятся дополнительные <code>hovers</code> цвета, но они вычисляются автоматически и мы их явно не указываем.
 
 </template>
 

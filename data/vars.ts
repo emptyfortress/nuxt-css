@@ -8,6 +8,9 @@ const vars = [
 		folder: 'primary',
 		textColor: 'white',
 		param: 'dark',
+		info: 'Используется в качестве <b>primary color</b> в дефолтной теме DV для всех страниц, кроме Заданий и Документов.<br />Является частью <b>cветофора</b>.',
+		chips: ['primary', 'default', 'светофор'],
+		definition: '--color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));',
 	},
 	{
 		id: 1,
@@ -17,6 +20,8 @@ const vars = [
 		folder: 'primary',
 		textColor: 'white',
 		param: 'doc',
+		info: 'Используется в качестве <b>primary color</b> для <b>Документов</b>.<br />Является частью <b>cветофора</b>.',
+		chips: ['primary', 'default', 'светофор'],
 	},
 	{
 		id: 2,

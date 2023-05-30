@@ -30,7 +30,7 @@ div
 		q-icon(name="mdi-reminder" size="xl" color="primary")
 		div
 			.fw-bold Примечание
-			p.mb-0 Эти цвета не зависят от
+			p Эти цвета не зависят от
 				Chip(label="primary" url="/variables/primary")
 				|и могут редактироваться независимо при настройке
 				NuxtLink.link.ml-2(to="/principles/theme") тем.
