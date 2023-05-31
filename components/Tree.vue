@@ -10,7 +10,6 @@
 		v-model:selected="selected"
 		no-selection-unset
 		v-model:expanded="expanded"
-		default-expand-all
 		no-results-label="Ничего нет"
 		:filter="filter")
 
@@ -42,7 +41,7 @@ const props = defineProps<TreeProps>()
 
 const tree = ref()
 const filter = ref('')
-const expanded = ref([])
+const expanded = ref(['/', '/variables', '/variables/additional'])
 const selected = ref()
 
 const toggle = () => {

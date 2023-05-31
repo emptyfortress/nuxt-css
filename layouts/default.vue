@@ -40,7 +40,7 @@ header {
 	position: sticky;
 	top: 0;
 	z-index: 2;
-	background: var(--bg-header);
+	background: var(--my-bg-header);
 	padding: 0 2rem;
 	display: flex;
 	align-items: center;

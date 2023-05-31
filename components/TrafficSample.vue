@@ -59,7 +59,7 @@ const calcClass = (e: string) => {
 	height: 48px;
 	border-radius: 50%;
 	margin-bottom: 0.5rem;
-	border: 4px solid var(--bg-header);
+	border: 4px solid var(--my-bg-header);
 	box-shadow: 0 0 5px rgba(0, 0, 0, 0.12);
 	cursor: pointer;
 }

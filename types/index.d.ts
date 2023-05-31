@@ -24,6 +24,7 @@ interface Color {
 	var: string
 	val: string
 	folder?: string
+	subfolder?: string
 	textColor?: string
 	param?: string
 	info?: string

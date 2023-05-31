@@ -72,6 +72,7 @@ const calcClass = computed(() => {
 	color: v-bind(textColor);
 	cursor: pointer;
 	font-size: 1.1rem;
+	text-align: center;
 	&:hover {
 		box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
 	}

@@ -1,10 +1,67 @@
 :root {
-	--bg-light: hsl(75, 14%, 95%);
+	--black: #000;
+	--white: #fff;
+	--deep-blue: hsl(207, 100%, 27%);
+	--focus-color: hsl(193, 82%, 63%);
+	--drop-target: hsl(122, 39%, 82%);
+	--drop-target-border: hsl(122, 39%, 15%);
+	--shadow-color: rgba(0, 0, 0, 0.3);
+	--border-color-transparent: hsla(0 0% 50% / 0.25);
+	--border-color: hsl(0 0% 70%);
+	--text-color-primary: #000;
+	--text-color-body: rgba(0, 0, 0, 0.7);
+	--text-color-secondary: rgba(0, 0, 0, 0.6);
+	--text-color-grey: var(--grey50);
+	--text-color-inverse: #fff;
+	--bg-light: hsl(0, 0%, 93%);
 	--bg-panel: hsl(0, 0%, 96%);
-	--bg-header: hsl(75, 14%, 85%);
+	--bg-header: hsl(0, 0%, 82%);
 	--bg-card: #fff;
 	--bg-dark: #0d0b09;
 	--bg-main: var(--bg-light);
+	--bg-selected: hsl(207, 90%, 90%);
+	--bg-selected-hover: hsl(207, 100%, 95%);
+
+	--grey10: hsl(0, 0%, 10%);
+	--grey20: hsl(0, 0%, 20%);
+	--grey30: hsl(0, 0%, 30%);
+	--grey40: hsl(0, 0%, 40%);
+	--grey50: hsl(0, 0%, 50%);
+	--grey60: hsl(0, 0%, 60%);
+	--grey70: hsl(0, 0%, 70%);
+	--grey80: hsl(0, 0%, 80%);
+	--grey85: hsl(0, 0%, 85%);
+	--grey90: hsl(0, 0%, 90%);
+	--grey93: hsl(0, 0%, 93%);
+
+	--hover-black-05: hsla(0, 0%, 0%, 0.05);
+	--hover-black-10: hsla(0, 0%, 0%, 0.1);
+	--hover-black-15: hsla(0, 0%, 0%, 0.15);
+	--hover-black-20: hsla(0, 0%, 0%, 0.2);
+	--hover-black-30: hsla(0, 0%, 0%, 0.3);
+	--hover-black-40: hsla(0, 0%, 0%, 0.4);
+	--hover-black-50: hsla(0, 0%, 0%, 0.5);
+	--hover-black-60: hsla(0, 0%, 0%, 0.6);
+	--hover-black-70: hsla(0, 0%, 0%, 0.7);
+	--hover-black-80: hsla(0, 0%, 0%, 0.8);
+	--hover-black-85: hsla(0, 0%, 0%, 0.85);
+
+	--hover-white-05: hsla(0, 0%, 100%, 0.05);
+	--hover-white-10: hsla(0, 0%, 100%, 0.1);
+	--hover-white-15: hsla(0, 0%, 100%, 0.15);
+	--hover-white-20: hsla(0, 0%, 100%, 0.2);
+	--hover-white-30: hsla(0, 0%, 100%, 0.3);
+	--hover-white-50: hsla(0, 0%, 100%, 0.5);
+	--hover-white-90: hsla(0, 0%, 100%, 0.9);
+
+	--hovers__white-bg: hsl(0, 0%, 95%);
+
+	--my-bg-light: hsl(75, 14%, 95%);
+	--bg-panel: hsl(0, 0%, 96%);
+	--my-bg-header: hsl(75, 14%, 85%);
+	--bg-card: #fff;
+	--bg-dark: #0d0b09;
+	--my-bg-main: var(--my-bg-light);
 	--bg-chip: hsla(0, 0%, 0%, 0.1);
 	--bg-selected: #b3dcff;
 	--prim: #285e8b;
@@ -62,10 +119,10 @@
 }
 
 body.body--dark {
-	--bg-main: var(--bg-dark);
-	--bg-card: var(--my-card-background);
+	--my-bg-main: var(--bg-dark);
+	--my-bg-card: var(--my-card-background);
 	color: var(--dark-text-color);
-	--bg-header: var(--bg-dark);
+	--my-bg-header: var(--bg-dark);
 	--dark-text-color: #ab9073;
 	--text-color: var(--dark-text-color);
 	--invert-text-color: var(--dark-text-color);

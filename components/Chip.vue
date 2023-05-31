@@ -18,7 +18,7 @@ NuxtLink(:to="props.url")
 
 <style scoped lang="scss">
 .q-chip {
-	background: var(--bg-header);
+	background: var(--my-bg-header);
 	color: var(--prim);
 	font-weight: 600;
 }

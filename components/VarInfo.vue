@@ -25,7 +25,6 @@ const color = computed(() => {
 		.code
 			.full
 				|{
-				// .inside(v-html="props.item.definition")
 				.inside {{ props.item.definition }}
 				|}
 		br
