@@ -1,11 +1,8 @@
-<script setup lang="ts">
-const { node } = useNodes()
-</script>
+<script setup lang="ts"></script>
 
 <template lang="pug">
 div
-	h4
-		// AnimZag(:zag="node?.label")
+	h2 subfolders
 </template>
 
 <style scoped lang="scss"></style>

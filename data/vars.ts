@@ -673,4 +673,7 @@ const primaryVars = computed(() => {
 const secondaryVars = computed(() => {
 	return vars.filter((item) => item.folder === 'secondary')
 })
-export { vars, primaryVars, secondaryVars }
+const additionalVars = computed(() => {
+	return vars.filter((item) => item.folder === 'additional')
+})
+export { vars, primaryVars, secondaryVars, additionalVars }
