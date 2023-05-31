@@ -29,5 +29,5 @@ interface Color {
 	info?: string
 	chips?: string[]
 	definition?: string
-	linked: LinkedVar[]
+	linked?: LinkedVar[]
 }

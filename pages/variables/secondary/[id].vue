@@ -12,6 +12,8 @@ const item = computed(() => {
 div
 	h4
 		AnimZag(:item="item" size="48px")
+	VarInfo(:item="item")
+
 </template>
 
 <style scoped lang="scss"></style>

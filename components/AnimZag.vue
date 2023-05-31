@@ -64,5 +64,8 @@ const coping = () => {
 	border-radius: 50%;
 	border: 5px solid #fff;
 	background: v-bind(color);
+	body.body--dark & {
+		border-color: var(--border-color);
+	}
 }
 </style>
