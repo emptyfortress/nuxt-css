@@ -52,10 +52,12 @@ const toggle = () => {
 
 const route = useRoute()
 
+watch(filter, (newFilter) => {
+	if (newFilter.length > 1) {
+		tree.value.expandAll()
+	}
+})
 watchEffect(() => {
-	// 	if (filter.value.length > 1) {
-	// 		tree.value.expandAll()
-	// 	}
 	selected.value = route.fullPath
 })
 </script>
