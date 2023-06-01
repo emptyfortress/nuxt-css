@@ -59,6 +59,7 @@ header {
 }
 .home {
 	height: calc(100vh - 60px);
+	color: var(--text-color);
 	:deep(.q-scrollarea__thumb--v) {
 		width: 5px;
 	}

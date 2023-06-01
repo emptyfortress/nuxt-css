@@ -16,7 +16,7 @@
 	--bg-light: hsl(0, 0%, 93%);
 	--bg-panel: hsl(0, 0%, 96%);
 	--bg-header: hsl(0, 0%, 82%);
-	--bg-card: #fff;
+	// --bg-card: #fff;
 	--bg-dark: #0d0b09;
 	--bg-main: var(--bg-light);
 	--bg-selected: hsl(207, 90%, 90%);
@@ -59,7 +59,7 @@
 	--my-bg-light: hsl(75, 14%, 95%);
 	--bg-panel: hsl(0, 0%, 96%);
 	--my-bg-header: hsl(75, 14%, 85%);
-	--bg-card: #fff;
+	--my-bg-card: #fff;
 	--bg-dark: #0d0b09;
 	--my-bg-main: var(--my-bg-light);
 	--bg-chip: hsla(0, 0%, 0%, 0.1);
@@ -121,7 +121,6 @@
 body.body--dark {
 	--my-bg-main: var(--bg-dark);
 	--my-bg-card: var(--my-card-background);
-	color: var(--dark-text-color);
 	--my-bg-header: var(--bg-dark);
 	--dark-text-color: #ab9073;
 	--text-color: var(--dark-text-color);

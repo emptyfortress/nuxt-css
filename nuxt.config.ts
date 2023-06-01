@@ -3,7 +3,7 @@ export default defineNuxtConfig({
 	quasar: {
 		sassVariables: 'assets/styles/quasar.variables.scss',
 		extras: {
-			fontIcons: ['mdi-v6'],
+			fontIcons: ['mdi-v6', 'material-icons'],
 		},
 		plugins: ['Notify', 'Loading'],
 		config: {

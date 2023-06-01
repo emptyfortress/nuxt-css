@@ -6,10 +6,12 @@ interface PropType {
 	mode: Boolean
 	size: String
 	big: Boolean
+	border: String
 }
 
 const props = withDefaults(defineProps<PropType>(), {
 	size: () => '150px',
+	border: () => '5px solid white',
 	big: () => false,
 })
 
@@ -64,7 +66,7 @@ const calcClass = computed(() => {
 	width: v-bind(size);
 	height: v-bind(size);
 	border-radius: 50%;
-	border: 5px solid white;
+	border: v-bind(border);
 	display: flex;
 	align-items: center;
 	justify-content: center;
