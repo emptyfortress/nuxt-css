@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const tab = ref('list')
+const tab = ref('info')
 </script>
 
 <template lang="pug">

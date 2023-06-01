@@ -79,12 +79,4 @@ const calcClass = computed(() => {
 		box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
 	}
 }
-body.body--dark {
-	.sample {
-		border: 5px solid grey;
-		&:hover {
-			border-color: white;
-		}
-	}
-}
 </style>

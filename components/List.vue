@@ -55,4 +55,7 @@ q-table(flat bordered
 	align-items: center;
 	gap: 1rem;
 }
+.q-dark {
+	color: var(--text-color);
+}
 </style>
