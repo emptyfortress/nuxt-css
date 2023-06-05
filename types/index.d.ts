@@ -19,7 +19,6 @@ interface LinkedVar {
 }
 
 interface Color {
-	id: number
 	label: string
 	var: string
 	val: string

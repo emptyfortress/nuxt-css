@@ -340,7 +340,7 @@ const vars = [
 	{
 		label: 'bg-header',
 		var: 'var(--bg-header)',
-		val: '',
+		val: 'red',
 		folder: 'additional',
 		subfolder: 'bg',
 		textColor: 'black',
@@ -367,7 +367,7 @@ const vars = [
 	{
 		label: 'bg-main',
 		var: 'var(--bg-main)',
-		val: '',
+		val: '#2196f3',
 		folder: 'additional',
 		subfolder: 'bg',
 		textColor: 'black',

@@ -1,0 +1,79 @@
+<script setup lang="ts">
+const bg = {
+	label: 'bg-main',
+	var: 'var(--bg-light)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'black',
+	param: '',
+}
+const bar = {
+	label: 'bg-header',
+	var: 'var(--color-dark)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'white',
+	param: '',
+}
+const sidebar = {
+	label: 'bg-panel',
+	var: 'var(--color-dark)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'white',
+	param: '',
+}
+</script>
+
+<template lang="pug">
+div
+	h4 Surface
+	.panel
+		q-icon(name="mdi-layers-outline" size="xl" color="primary")
+		div
+			p Поверхность - это любая закрашенная область интерфейса. То есть, элемент, имеющий свойство <b>background-color</b>.
+			p.mb0 В веб-клиенте мы различаем (в порядке увеличения иерархии внимания пользователя):
+			ol.my0
+				li background
+				li bar
+				li sidebar
+				li card
+				li panel
+				li modal dialog
+
+	.panel.var
+		q-icon(name="mdi-numeric-1-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Background
+			p Это цвет области основного контента позади скролла. По дефолту это светло-серый цвет (hsl(0, 0%, 93%)) - для выделения других панелей и окон.
+			p Переменная: <b>--bg-main</b>.
+
+		ColorSample(:item="bg" :big="true" size="120px")
+		.note1
+			q-icon(name="mdi-reminder" size="md" color="primary")
+			p --bg-main может принимать два значения: --bg-light и --bg-dark <br />(для переключения светлой и темной тем).
+
+	.panel.var
+		q-icon(name="mdi-numeric-2-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Bar
+			p Это область (обычно вверху приложения, окна или панели), содержащая  верхнеуровневую навигацию, титул и др. Часто выделяется <b>ключевым</b> цветом.
+			p Переменная: <b>--bg-header, --primary-color</b>.
+		ColorSample(:item="bar" :big="true" size="120px")
+		.note1
+			q-icon(name="mdi-reminder" size="md" color="primary")
+			p Поскольку у нас 3 ключевых цвета, то --bg-header может принимать три значения:<br />--color-dark, --color-doc и --color-task.
+
+	.panel.var
+		q-icon(name="mdi-numeric-3-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Sidebar
+			p Это выезжающие слева и справа вспомогательные панели. Могут выделяться ключевым цветом.
+			p Переменная: <b>--bg-panel</b>.
+		ColorSample(:item="sidebar" :big="true" size="120px")
+</template>
+
+<style scoped lang="scss"></style>
