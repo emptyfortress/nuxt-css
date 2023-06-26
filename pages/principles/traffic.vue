@@ -33,9 +33,9 @@ div
 		div
 			p Разделы веб-клиента в цветах светофора:
 			q-carousel(v-model="slide" transition-prev="slide-right" transition-next="slide-left" animated thumbnails infinite)
-				q-carousel-slide(:name="1" img-src="https://cdn.quasar.dev/img/mountains.jpg")
-				q-carousel-slide(:name="2" img-src="https://cdn.quasar.dev/img/parallax1.jpg")
-				q-carousel-slide(:name="3" img-src="https://cdn.quasar.dev/img/parallax2.jpg")
+				q-carousel-slide(:name="1" img-src="~assets/img/screen1.png")
+				q-carousel-slide(:name="2" img-src="~assets/img/screen2.png")
+				q-carousel-slide(:name="3" img-src="~assets/img/screen3.png")
 </template>
 
 <style scoped lang="scss"></style>

@@ -4,9 +4,9 @@ const ratio = ref(300)
 const { nodes, node } = useNodes()
 const router = useRouter()
 
-const home = () => {
-	router.push('/')
-}
+// const home = () => {
+// 	router.push('/')
+// }
 </script>
 
 <template lang="pug">
@@ -47,6 +47,7 @@ header {
 	gap: 1rem;
 	color: var(--icon);
 }
+
 .title {
 	display: flex;
 	align-items: center;
@@ -54,12 +55,15 @@ header {
 	font-size: 1.2rem;
 	cursor: pointer;
 }
+
 .grow {
 	flex-grow: 1;
 }
+
 .home {
 	height: calc(100vh - 60px);
 	color: var(--text-color);
+
 	:deep(.q-scrollarea__thumb--v) {
 		width: 5px;
 	}

@@ -72,9 +72,9 @@ const rotate = async () => {
 div
 	.title
 		div Web client
-		img(ref="logo" src="/logo.svg" @click="rotate").logo
+		img.logo(ref="logo" src="/logo.svg" @click="rotate")
 	.panel
-		img(ref="dv" src="/webclient.svg" @click="mov").dv
+		img.dv(ref="dv" src="/webclient.svg" @click="mov")
 		div
 			p Здесь собрана информация про использовании css-переменных в веб-клиенте, и их кастомизацию.
 			p.font-italic.text-sm Web-клиент – полнофункциональное рабочее место пользователя Docsvision, которое предоставляет доступ к системе через любую ОС  и любой интернет-браузер, без необходимости установки на устройство пользователя приложения или дополнительного ПО.
@@ -87,10 +87,12 @@ div
 	display: flex;
 	justify-content: space-between;
 	margin-bottom: 0.5rem;
+
 	img {
 		height: 36px;
 	}
 }
+
 .logo,
 .dv {
 	transform-origin: left 50%;
