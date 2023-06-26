@@ -64,13 +64,13 @@ div
 	.panel
 		q-icon(name="mdi-layers-outline" size="xl" color="primary")
 		div
-			p Поверхность - это любая закрашенная область интерфейса. То есть, элемент, имеющий свойство <b>background-color</b>.
-			p.mb0 В веб-клиенте мы различаем (в порядке увеличения иерархии внимания пользователя):
+			p Поверхность - это любая закрашенная область интерфейса. То есть, это элемент, имеющий свойство <b>background-color</b>. Интерфейс имеет "глубину", поэтому цвет поверхности зависит от высоты ее расположения. Чем ближе поверхность к пользователю, тем она ярче.
+			p.mb0 В веб-клиенте мы различаем следующие поверхности:
 			ol.my0
 				li background
 				li bar
 				li sidebar
-				// li panel
+				li panel
 				li card
 				li modal dialog
 
@@ -101,7 +101,7 @@ div
 		q-icon(name="mdi-numeric-3-circle-outline" size="lg" color="primary")
 		div
 			.fw-bold Sidebar
-			p Это выезжающие слева и справа вспомогательные панели. Могут выделяться ключевым цветом.
+			p Это выезжающая слева навигационная панель. Может выделяться ключевым цветом.
 			p Переменные: <b>--bg-panel</b>, <b>--primary-color</b>.
 		.row.q-gutter-xs
 			ColorSample(:item="panel" :big="true" size="120px")
@@ -111,7 +111,7 @@ div
 		q-icon(name="mdi-numeric-4-circle-outline" size="lg" color="primary")
 		div
 			.fw-bold Panel
-			p Это другие панели, кроме
+			p Это любые другие панели, кроме навигационной.
 			p Переменная: <b>--bg-panel</b>.
 		ColorSample(:item="panel" :big="true" size="120px")
 
