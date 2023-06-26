@@ -30,4 +30,5 @@ interface Color {
 	chips?: string[]
 	definition?: string
 	linked?: LinkedVar[]
+	border?: boolean
 }

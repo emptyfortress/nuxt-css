@@ -18,13 +18,43 @@ const bar = {
 	param: '',
 }
 const sidebar = {
-	label: 'bg-panel',
+	label: 'primary-color',
 	var: 'var(--color-dark)',
 	val: '',
 	folder: 'additional',
 	subfolder: 'bg',
 	textColor: 'white',
 	param: '',
+}
+const panel = {
+	label: 'bg-panel',
+	var: 'var(--bg-panel)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'var(--text-color)',
+	param: '',
+	border: true,
+}
+const primary = {
+	label: 'primary-color',
+	var: 'var(--primary-color)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'var(--text-color)',
+	param: '',
+	border: true,
+}
+const card = {
+	label: 'bg-card',
+	var: 'var(--my-bg-card)',
+	val: '',
+	folder: 'additional',
+	subfolder: 'bg',
+	textColor: 'var(--text-color)',
+	param: '',
+	border: true,
 }
 </script>
 
@@ -40,8 +70,8 @@ div
 				li background
 				li bar
 				li sidebar
+				// li panel
 				li card
-				li panel
 				li modal dialog
 
 	.panel.var
@@ -72,8 +102,34 @@ div
 		div
 			.fw-bold Sidebar
 			p Это выезжающие слева и справа вспомогательные панели. Могут выделяться ключевым цветом.
+			p Переменные: <b>--bg-panel</b>, <b>--primary-color</b>.
+		.row.q-gutter-xs
+			ColorSample(:item="panel" :big="true" size="120px")
+			ColorSample(:item="sidebar" :big="true" size="120px")
+
+	.panel.var
+		q-icon(name="mdi-numeric-4-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Panel
+			p Это другие панели, кроме
 			p Переменная: <b>--bg-panel</b>.
-		ColorSample(:item="sidebar" :big="true" size="120px")
+		ColorSample(:item="panel" :big="true" size="120px")
+
+	.panel.var
+		q-icon(name="mdi-numeric-5-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Card
+			p Карточка это любая область, содержащая сгруппированную информацию. Обычно карточки белые (чтобы выделялись на фоне) и имеют тени.
+			p Переменная: <b>--bg-card</b>.
+		ColorSample(:item="card" :big="true" size="120px")
+
+	.panel.var
+		q-icon(name="mdi-numeric-6-circle-outline" size="lg" color="primary")
+		div
+			.fw-bold Modal dialog
+			p Диалог требует реакции пользователя, поэтому, обычно, остальной интерфейс блокируется.
+			p Переменная: <b>--bg-card</b>.
+		ColorSample(:item="card" :big="true" size="120px")
 </template>
 
 <style scoped lang="scss"></style>

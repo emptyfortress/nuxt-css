@@ -6,7 +6,7 @@ interface PropType {
 	mode: Boolean
 	size: String
 	big: Boolean
-	border: String
+	border?: String
 }
 
 const props = withDefaults(defineProps<PropType>(), {
@@ -21,6 +21,11 @@ const color = computed(() => {
 })
 const textColor = computed(() => {
 	return props.item.textColor
+})
+const border = computed(() => {
+	if (props.item.border) {
+		return '1px solid var(--border-color)'
+	}
 })
 
 const label = computed(() => {
@@ -56,13 +61,14 @@ const calcClass = computed(() => {
 
 <template lang="pug">
 .sample(ref="sample" :class="calcClass" @click="coping")
-	span(v-show="big") --{{label}}
+	span(v-show="big") --{{ label }}
 </template>
 
 <style scoped lang="scss">
 .one {
 	--at-apply: animate-bounce-alt animate-count-1;
 }
+
 .sample {
 	width: v-bind(size);
 	height: v-bind(size);
@@ -76,6 +82,8 @@ const calcClass = computed(() => {
 	cursor: pointer;
 	font-size: 1.1rem;
 	text-align: center;
+	border: v-bind(border);
+
 	&:hover {
 		box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.3);
 	}
