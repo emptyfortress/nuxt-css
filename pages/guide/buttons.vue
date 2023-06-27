@@ -3,6 +3,52 @@
 <template lang="pug">
 div
 	h4 Buttons
+	.panel
+		q-icon(name="mdi-gesture-tap-button" size="xl" color="primary")
+		div
+			p Задача кнопок - инициировать действие пользователя.<br />Поэтому, все кнопки имеют некоторую семантику и отличаются своей ролью.
+			p.mb0 В веб-клиенте мы различаем следующие кнопки:
+			ol.my0
+				li Icon
+				li Text
+				li Outlined
+				li Rounded
+				li Flat
+				li Elevated
+				li FAB (first action button)
+			br
+			.row.q-gutter-sm
+				q-btn(flat round icon="mdi-alert") 
+				q-btn(flat label="Text") 
+				q-btn(outline label="Outline") 
+				q-btn(rounded outline label="Rounded") 
+				q-btn.gr(unelevated label="Flat") 
+				q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
+				q-btn.gr(label="Elevated") 
+				q-btn.gr(round icon="mdi-crosshairs-gps")
+			br
+			.note1
+				q-icon(name="mdi-reminder" size="md" color="primary")
+				p Внешний вид кнопок web-клиента слегка отличается (на текущем сайте используются сторонние компоненты), но для наших целей это непринципиально.
+
+	.panel
+		div(style="width: 48px")
+		div
+			p У всех кнопок есть общие свойства:
+			ul.my0
+				li Курсор - pointer
+				li Обязательный hover state
+				li Опциональный active state
+				li Текст метки uppercase (допускается использование lowercase)
+				li Допускается двухстрочный label при длинных текстовых метках
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.q-btn {
+	height: 36px;
+}
+
+.gr {
+	background: var(--grey80);
+}
+</style>
