@@ -38,4 +38,12 @@ div
 				q-carousel-slide(:name="3" img-src="~assets/img/screen3.png")
 </template>
 
-<style scoped lang="scss"></style>
+<style scoped lang="scss">
+.q-carousel__slide {
+	background-position: 0 0;
+}
+
+:deep(.q-carousel .q-carousel__thumbnail) {
+	border: 2px solid var(--prim);
+}
+</style>

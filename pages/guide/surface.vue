@@ -81,7 +81,7 @@ div
 			p Это цвет области основного контента позади скролла. По дефолту это светло-серый цвет (hsl(0, 0%, 93%)) - для выделения других панелей и окон.
 			p Переменная: <b>--bg-main</b>.
 
-		ColorSample(:item="bg" :big="true" size="120px")
+		ColorSample(:item="bg" :big="true" size="120px" border="1px solid #ccc")
 		.note1
 			q-icon(name="mdi-reminder" size="md" color="primary")
 			p --bg-main может принимать два значения: --bg-light и --bg-dark <br />(для переключения светлой и темной тем).
@@ -104,7 +104,7 @@ div
 			p Это выезжающая слева навигационная панель. Может выделяться ключевым цветом.
 			p Переменные: <b>--bg-panel</b>, <b>--primary-color</b>.
 		.row.q-gutter-xs
-			ColorSample(:item="panel" :big="true" size="120px")
+			ColorSample(:item="panel" :big="true" size="120px" border="1px solid #ccc")
 			ColorSample(:item="sidebar" :big="true" size="120px")
 
 	.panel.var
@@ -113,7 +113,7 @@ div
 			.fw-bold Panel
 			p Панель это любая область, содержащая сгруппированную информацию.
 			p Переменная: <b>--bg-panel</b>.
-		ColorSample(:item="panel" :big="true" size="120px")
+		ColorSample(:item="panel" :big="true" size="120px" border="1px solid #ccc")
 
 	.panel.var
 		q-icon(name="mdi-numeric-5-circle-outline" size="lg" color="primary")
@@ -121,7 +121,7 @@ div
 			.fw-bold Card
 			p Карточка это панель с белым фоном и тенью. 
 			p Переменная: <b>--bg-card</b>.
-		ColorSample(:item="card" :big="true" size="120px")
+		ColorSample(:item="card" :big="true" size="120px" border="1px solid #ccc")
 
 	.panel.var
 		q-icon(name="mdi-numeric-6-circle-outline" size="lg" color="primary")
@@ -129,7 +129,7 @@ div
 			.fw-bold Modal dialog
 			p Диалог требует реакции пользователя, поэтому, обычно, остальной интерфейс блокируется.
 			p Переменная: <b>--bg-card</b>.
-		ColorSample(:item="card" :big="true" size="120px")
+		ColorSample(:item="card" :big="true" size="120px" border="1px solid #ccc")
 </template>
 
 <style scoped lang="scss"></style>
