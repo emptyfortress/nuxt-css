@@ -1,25 +1,17 @@
 <script setup lang="ts">
 
-const panel = {
-	label: 'bg-panel',
-	var: 'var(--bg-panel)',
-	val: '',
-	folder: 'additional',
-	subfolder: 'bg',
-	textColor: 'var(--text-color)',
-	param: '',
-	border: true,
-}
-const card = {
-	label: 'bg-card',
-	var: 'var(--my-bg-card)',
-	val: '',
-	folder: 'additional',
-	subfolder: 'bg',
-	textColor: 'var(--text-color)',
-	param: '',
-	border: true,
-}
+const list = reactive([
+	{ id: 0, selected: false, label: 'Background', val: '--bg-card' },
+	{ id: 1, selected: false, label: 'Border', val: '--border-color' },
+	{ id: 2, selected: false, label: 'Hover', val: '--hovers__white-bg' },
+	{ id: 3, selected: true, label: 'Selected', val: '--bg-selected' },
+	{ id: 4, selected: false, label: 'Selected hover', val: '--bg-selected-hover' },
+])
+
+const select = ((e: any) => {
+	list.map(item => item.selected = false)
+	e.selected = true
+})
 </script>
 
 <template lang="pug">
@@ -52,21 +44,9 @@ div
 		div
 			.text-bold Переменные:
 			q-list(style="width: 400px" bordered)
-				.item
-					q-item-label Background:
-					q-item-label --bg-card
-				.item
-					q-item-label Border:
-					q-item-label --border-color
-				.item.hover
-					q-item-label Hover:
-					q-item-label --hovers__white-bg
-				.item.sel
-					q-item-label Selected:
-					q-item-label --bg-selected
-				.item.sel1
-					q-item-label Selected hover:
-					q-item-label --bg-selected-hover
+				.item(v-for="item in list" :key="item.id" :class="{ sel: item.selected }" @click="select(item)")
+					q-item-label {{ item.label }}
+					q-item-label.text-bold {{ item.val }}
 
 </template>
 

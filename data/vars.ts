@@ -9,7 +9,7 @@ const vars = [
 		subfolder: 'primary',
 		textColor: 'white',
 		param: 'dark',
-		info: 'Используется в качестве <b>primary color</b> в дефолтной теме DV для всех страниц, кроме Заданий и Документов.<br />Является частью <b>cветофора</b>.',
+		info: 'Используется в качестве <b>primary color</b> в дефолтной теме DV для всех страниц, кроме Заданий и Документов.<br />Является частью <b>светофора</b>.',
 		chips: ['primary', 'default', 'светофор'],
 		definition: '--color-dark: hsl(var(--color-dark-h), var(--color-dark-s), var(--color-dark-l));',
 		linked: [
@@ -180,6 +180,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'white',
 		param: '',
+		info: 'Черный цвет',
 	},
 	{
 		label: 'white',
@@ -189,6 +190,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'black',
 		param: '',
+		info: 'Белый цвет',
 	},
 	{
 		label: 'red-color',
@@ -198,6 +200,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'white',
 		param: 'red',
+		info: 'Яркий красный',
 	},
 	{
 		label: 'deep-blue',
@@ -207,6 +210,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'white',
 		param: '',
+		info: 'Темно-синий',
 	},
 	{
 		label: 'focus-color',
@@ -216,6 +220,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'white',
 		param: '',
+		info: 'Цвет outline при фокусе элемента',
 	},
 	{
 		label: 'draggable-color',
@@ -236,6 +241,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'black',
 		param: '',
+		info: 'Обозначение места для перетаскивания файлов',
 	},
 	{
 		label: 'drop-target-border',
@@ -245,6 +251,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'white',
 		param: '',
+		info: 'Граница области для перетаскивания файлов',
 	},
 	{
 		label: 'shadow-color',
@@ -254,6 +261,8 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'black',
 		param: '',
+		info: 'Основная тень',
+
 	},
 	{
 		label: 'border-color',
@@ -263,6 +272,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'black',
 		param: '',
+		info: 'Граница панелей и карточек',
 	},
 	{
 		label: 'border-color-transparent',
@@ -272,6 +282,7 @@ const vars = [
 		subfolder: 'common',
 		textColor: 'black',
 		param: '',
+		info: 'Граница панелей и карточек - полупрозрачная',
 	},
 
 	{
@@ -282,6 +293,7 @@ const vars = [
 		subfolder: 'text',
 		textColor: 'white',
 		param: '',
+		info: 'Цвет важного текста',
 	},
 	{
 		label: 'text-color-body',
@@ -291,6 +303,7 @@ const vars = [
 		subfolder: 'text',
 		textColor: 'white',
 		param: '',
+		info: 'Цвет текста body',
 	},
 	{
 		label: 'text-color-secondary',
@@ -300,6 +313,7 @@ const vars = [
 		subfolder: 'text',
 		textColor: 'white',
 		param: '',
+		info: 'Цвет неважного текста',
 	},
 	{
 		label: 'text-color-grey',
@@ -309,6 +323,7 @@ const vars = [
 		subfolder: 'text',
 		textColor: 'white',
 		param: '',
+		info: 'Серый текст',
 	},
 	{
 		label: 'text-color-inverse',
@@ -318,6 +333,7 @@ const vars = [
 		subfolder: 'text',
 		textColor: 'black',
 		param: '',
+		info: 'Инверсный цвет текста',
 	},
 	{
 		label: 'bg-light',
@@ -327,6 +343,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Основной фон при светлой теме',
 	},
 	{
 		label: 'bg-panel',
@@ -336,6 +353,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Фон панелей',
 	},
 	{
 		label: 'bg-header',
@@ -345,6 +363,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Фон топ-бара',
 	},
 	{
 		label: 'bg-card',
@@ -354,6 +373,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Фон карточек',
 	},
 	{
 		label: 'bg-dark',
@@ -363,6 +383,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'white',
 		param: '',
+		info: 'Основной фон при темной теме',
 	},
 	{
 		label: 'bg-main',
@@ -372,6 +393,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Основной фон',
 	},
 	{
 		label: 'bg-selected',
@@ -381,6 +403,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Фон выбранного элемента списка, коллекции',
 	},
 	{
 		label: 'bg-selected-hover',
@@ -390,6 +413,7 @@ const vars = [
 		subfolder: 'bg',
 		textColor: 'black',
 		param: '',
+		info: 'Hover выбранного элемента',
 	},
 	{
 		label: 'hover-black-05',
@@ -399,6 +423,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-10',
@@ -408,6 +433,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-15',
@@ -417,6 +443,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-20',
@@ -426,6 +453,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-30',
@@ -435,6 +463,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-40',
@@ -444,6 +473,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-50',
@@ -453,6 +483,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-60',
@@ -462,6 +493,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-70',
@@ -471,6 +503,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-80',
@@ -480,6 +513,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 	{
 		label: 'hover-black-85',
@@ -489,6 +523,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: 'Прозрачный hover в % black',
 	},
 
 	{
@@ -499,6 +534,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-10',
@@ -508,6 +544,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-15',
@@ -517,6 +554,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-20',
@@ -526,6 +564,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-30',
@@ -535,6 +574,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-50',
@@ -544,6 +584,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hover-white-90',
@@ -553,6 +594,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Прозрачный hover в % white',
 	},
 	{
 		label: 'hovers__white-bg',
@@ -562,6 +604,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: 'Hover для списков с белым фоном',
 	},
 	{
 		label: 'grey10',
@@ -571,6 +614,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey20',
@@ -580,6 +624,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey30',
@@ -589,6 +634,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey40',
@@ -598,6 +644,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey50',
@@ -607,6 +654,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey60',
@@ -616,6 +664,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'white',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey70',
@@ -625,6 +674,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey80',
@@ -634,6 +684,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey85',
@@ -643,6 +694,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey90',
@@ -652,6 +704,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: '% grey',
 	},
 	{
 		label: 'grey93',
@@ -661,6 +714,7 @@ const vars = [
 		subfolder: 'hovers',
 		textColor: 'black',
 		param: '',
+		info: '% grey',
 	},
 ]
 

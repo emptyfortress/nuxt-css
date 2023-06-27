@@ -23,9 +23,9 @@ const color = computed(() => {
 const textColor = computed(() => {
 	return props.item.textColor
 })
-const border = computed(() => {
+const bord = computed(() => {
 	if (props.item.border) {
-		return '1px solid var(--border-color)'
+		return props.item.border
 	}
 })
 
@@ -74,7 +74,7 @@ const calcClass = computed(() => {
 	width: v-bind(size);
 	height: v-bind(size);
 	border-radius: 50%;
-	border: v-bind(border);
+	border: v-bind(bord);
 	display: flex;
 	align-items: center;
 	justify-content: center;
