@@ -6,7 +6,7 @@ div
 	.panel
 		q-icon(name="mdi-gesture-tap-button" size="xl" color="primary")
 		div
-			p Задача кнопок - инициировать действие пользователя.<br />Поэтому, все кнопки имеют некоторую семантику и отличаются своей ролью.
+			p Задача кнопок - инициировать действие пользователя.<br />Поэтому, все кнопки имеют некоторую семантику и отличаются своей ролью / важностью.
 			p.mb0 В веб-клиенте мы различаем следующие кнопки:
 			ol.my0
 				li Icon
@@ -14,7 +14,9 @@ div
 				li Outlined
 				li Rounded
 				li Flat
-				li Elevated
+				li Flat + icon
+				li Flat + loading state
+				li Primary
 				li FAB (first action button)
 			br
 			.row.q-gutter-sm
@@ -24,6 +26,7 @@ div
 				q-btn(rounded outline label="Rounded") 
 				q-btn.gr(unelevated label="Flat") 
 				q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
+				q-btn.gr(unelevated :loading="true" icon="mdi-alert" label="Loading") 
 				q-btn.pr(label="Primary") 
 				q-btn.pri(round icon="mdi-plus")
 			br
@@ -64,18 +67,29 @@ div
 				div - обычная (не главная) кнопка действий
 				.text-center
 					q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
-				div - обычная (не главная) кнопка действий
+				div - если есть иконка
+				.text-center
+					q-btn.gr(unelevated :loading="true" icon="mdi-alert" label="Loading") 
+				div - loading state
 				.text-center
 					q-btn.pr(label="Primary") 
 				div - кнопка для <b>primary actions</b>
 				.text-center
 					q-btn.pri(round icon="mdi-plus")
 				div - плавающая кнопка <b>primary actions</b>
+			br
+			.note1
+				q-icon(name="mdi-reminder" size="md" color="primary")
+				p Цвет primary buttons зависит от раздела web-клиента.
 </template>
 
 <style scoped lang="scss">
-.q-btn {
+:deep(.q-btn) {
 	height: 36px;
+
+	&:focus {
+		outline: 2px solid var(--focus-color);
+	}
 }
 
 .gr {
