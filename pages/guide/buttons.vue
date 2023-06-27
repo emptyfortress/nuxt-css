@@ -25,7 +25,7 @@ div
 				q-btn.gr(unelevated label="Flat") 
 				q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
 				q-btn.pr(label="Primary") 
-				q-btn.pri(round icon="mdi-crosshairs-gps")
+				q-btn.pri(round icon="mdi-plus")
 			br
 			.note1
 				q-icon(name="mdi-reminder" size="md" color="primary")
@@ -47,10 +47,30 @@ div
 		div
 			p.text-bold Использование
 			.grid
-				q-btn(flat round icon="mdi-alert")
-				.q-ml-md - при недостатке места
-				q-btn(flat label="Text") 
-				.q-ml-md - при недостатке места
+				.text-center
+					q-btn(flat round icon="mdi-alert")
+				div - при недостатке места
+				.text-center
+					q-btn(flat label="Text") 
+				div - для обозначения <b>secondary actions</b> (кнопка "Отмена")
+				.text-center
+					q-btn(outline label="Outline") 
+				div - для обозначения других действий
+				.text-center
+					q-btn(rounded outline label="Rounded") 
+				div - если нужно дополнительно выделить кнопку
+				.text-center
+					q-btn.gr(unelevated label="Flat") 
+				div - обычная (не главная) кнопка действий
+				.text-center
+					q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
+				div - обычная (не главная) кнопка действий
+				.text-center
+					q-btn.pr(label="Primary") 
+				div - кнопка для <b>primary actions</b>
+				.text-center
+					q-btn.pri(round icon="mdi-plus")
+				div - плавающая кнопка <b>primary actions</b>
 </template>
 
 <style scoped lang="scss">
@@ -80,6 +100,7 @@ div
 	display: grid;
 	grid-template-columns: auto 1fr;
 	align-items: center;
-	column-gap: 1rem;
+	column-gap: 2rem;
+	row-gap: .5rem;
 }
 </style>
