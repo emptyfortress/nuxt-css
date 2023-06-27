@@ -111,7 +111,7 @@ div
 		q-icon(name="mdi-numeric-4-circle-outline" size="lg" color="primary")
 		div
 			.fw-bold Panel
-			p Это любые другие панели, кроме навигационной.
+			p Панель это любая область, содержащая сгруппированную информацию.
 			p Переменная: <b>--bg-panel</b>.
 		ColorSample(:item="panel" :big="true" size="120px")
 
@@ -119,7 +119,7 @@ div
 		q-icon(name="mdi-numeric-5-circle-outline" size="lg" color="primary")
 		div
 			.fw-bold Card
-			p Карточка это любая область, содержащая сгруппированную информацию. Обычно карточки белые (чтобы выделялись на фоне) и имеют тени.
+			p Карточка это панель с белым фоном и тенью. 
 			p Переменная: <b>--bg-card</b>.
 		ColorSample(:item="card" :big="true" size="120px")
 

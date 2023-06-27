@@ -13,6 +13,7 @@ const props = withDefaults(defineProps<PropType>(), {
 	size: () => '150px',
 	border: () => '5px solid white',
 	big: () => false,
+	medium: () => false,
 	mode: () => false,
 })
 
