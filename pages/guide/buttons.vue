@@ -24,8 +24,8 @@ div
 				q-btn(rounded outline label="Rounded") 
 				q-btn.gr(unelevated label="Flat") 
 				q-btn.gr(unelevated icon="mdi-alert" label="Flat + icon") 
-				q-btn.gr(label="Elevated") 
-				q-btn.gr(round icon="mdi-crosshairs-gps")
+				q-btn.pr(label="Primary") 
+				q-btn.pri(round icon="mdi-crosshairs-gps")
 			br
 			.note1
 				q-icon(name="mdi-reminder" size="md" color="primary")
@@ -41,6 +41,16 @@ div
 				li Опциональный active state
 				li Текст метки uppercase (допускается использование lowercase)
 				li Допускается двухстрочный label при длинных текстовых метках
+
+	.panel
+		q-icon(name="mdi-anchor" size="lg" color="primary")
+		div
+			p.text-bold Использование
+			.grid
+				q-btn(flat round icon="mdi-alert")
+				.q-ml-md - при недостатке места
+				q-btn(flat label="Text") 
+				.q-ml-md - при недостатке места
 </template>
 
 <style scoped lang="scss">
@@ -50,5 +60,26 @@ div
 
 .gr {
 	background: var(--grey80);
+}
+
+.pr {
+	background: var(--color-doc);
+	color: white;
+}
+
+.pri {
+	background: var(--color-doc);
+	color: white;
+
+	i {
+		text-align: center;
+	}
+}
+
+.grid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	column-gap: 1rem;
 }
 </style>
