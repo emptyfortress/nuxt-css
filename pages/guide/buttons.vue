@@ -41,6 +41,7 @@ div
 			ul.my0
 				li Курсор - pointer
 				li Обязательный hover state
+				li Обязательный focus state для actions buttons
 				li Опциональный active state
 				li Текст метки uppercase (допускается использование lowercase)
 				li Допускается двухстрочный label при длинных текстовых метках
@@ -88,7 +89,7 @@ div
 	height: 36px;
 
 	&:focus {
-		outline: 2px solid var(--focus-color);
+		outline: 2px solid orange !important;
 	}
 }
 
